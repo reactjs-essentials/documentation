@@ -200,6 +200,8 @@ Goal of this section, get familiar with dev environment, hands on first app deve
   // add hello world component
 ```
 
+[lab-00] (https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+
 ### App from create react app
 
 ```
@@ -212,6 +214,13 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 ### Function component vs class components
 
 #### LAB01 - Class Component
+
+- public code
+- the need for import React from "react"; to all react components
+- the need of reference another react components to use
+- explain this.props
+- explain render
+- the state of class components
 
 #### LAB02 - Function component
 
