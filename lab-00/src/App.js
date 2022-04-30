@@ -1,11 +1,10 @@
-import "./App.css";
+import React from "react";
+import "./style.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">Lab 00</header>
+    <div>
+      <h1>lab-00</h1>
     </div>
   );
 }
-
-export default App;
