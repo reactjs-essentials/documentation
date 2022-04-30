@@ -244,6 +244,12 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 
 ### State and Lifecycle [link] (https://reactjs.org/docs/state-and-lifecycle.html)
 
+#### LAB03 - State
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-start)
+
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-end)
+
 ### React Hook - first look
 
 #### LAB03 - React hook
@@ -255,7 +261,7 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 
 ```
 
-#### LAB04 - First multi component page
+#### LAB04 - multi component page
 
 ```
   // Given a predefined layout
