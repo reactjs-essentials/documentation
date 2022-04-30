@@ -250,6 +250,10 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-end)
 
+- componentDidMount
+- componentWillUnmount
+- use setState
+
 ### React Hook - first look
 
 #### LAB03 - React hook
@@ -258,6 +262,21 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 
 ```
   // combine multiple components, pass props and trigger events
+  - challange add increment as prop
+
+```
+
+// Wrong
+this.setState({
+counter: this.state.counter + this.props.increment,
+});
+
+// Correct
+this.setState((state, props) => ({
+counter: state.counter + props.increment
+}));
+
+```
 
 ```
 
