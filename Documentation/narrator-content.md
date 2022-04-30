@@ -216,7 +216,6 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 #### LAB01 - Class Component
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
-
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-end)
 
 - public code
@@ -227,6 +226,21 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 - the state of class components
 
 #### LAB02 - Function component
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-02-end)
+
+- difference between function & class components
+  - (Function) is just a plain JavaScript function that accepts props as an argument and returns a React element. (Class) requires you to extend from React. Component and create a render function which returns a React element.
+  - (Function) There is no render method used in functional components. (Class) It must have the render() method returning JSX (which is syntactically similar to HTML)
+  - (Function) Also known as Stateless components as they simply accept data and display them in some form, that they are mainly responsible for rendering UI. (Class) Also known as Stateful components because they implement logic and state.
+  - React lifecycle methods cannot be used in function components while class components can.
+  - (Function) Hooks can be easily used in functional components to make them Stateful. (Class) It requires different syntax inside a class component to implement hooks.
+- Why use Function components instead
+  - same performance but less code and arguablby cleaner aproach
+  - with use of hooks you can archive all functionality class offer in a functional aproach.
+  - Currently the development community favour the use of functional components and the use of hooks to manage the component state. so thats the aproach we will favour for now on.
 
 ### State and Lifecycle [link] (https://reactjs.org/docs/state-and-lifecycle.html)
 
