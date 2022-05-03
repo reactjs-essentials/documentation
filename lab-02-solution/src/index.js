@@ -6,7 +6,7 @@ const root = createRoot(rootElement);
 function tick() {
   const element = (
     <div>
-      <h1>lab 03</h1>
+      <h1>lab 02</h1>
       <h2>It is {new Date().toLocaleTimeString()}.</h2>
     </div>
   );

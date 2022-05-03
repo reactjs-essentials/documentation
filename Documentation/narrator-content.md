@@ -130,6 +130,32 @@ When you need to work with asynchronous operations, usually have to deal with pr
 
 Goal of this section, get familiar with dev environment, hands on first app developments, basic react concepts
 
+### First react app
+
+```
+  npm init -y
+  npm install react react-dom next
+  // add hello world component
+```
+
+intruducing [lab-00] (https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+
+### App from create react app
+
+```
+  npx create-react-app my-app
+  cd my-app
+  npm start
+  // add hello world component
+```
+
+- node modules
+- src
+- index.html
+- index.js
+- package.json
+- scripts inside package.json
+
 ### React basic concepts & conventions
 
 - component Declaration Always in Pascal case <Compenent>
@@ -166,6 +192,7 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 - props & state
 - <Compenent> declaration
 - Basic examples Functions / Class components
+- className stands for class in html
 - Conditional Rendering [link] (https://reactjs.org/docs/conditional-rendering.html)
 
       ```
@@ -192,31 +219,18 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 - React Updating the browser / Tree reconsiliation - Tree reconsiliation (example xxx)
   If you try to type something in the text box of the HTML version, you will not be able to. This is very much expected because we are basically throwing away the whole DOM node on every tick and regenerating it. However, if you try to type something in the text box that is rendered with React, you can certainly do that. Although the whole React rendering code is within our ticking timer, React is changing only the timestamp text and not the whole DOM node. This is why the text input was not regenerated and we were able to type in it. You can see the different ways we are updating the DOM visually if you inspect the two DOM nodes in the Chrome DevTools elements panel. The Chrome DevTools highlight any DOM elements that get updated. You will see how we are regenerating the entire first mountNode element with every tick, while React is smartly only regenerating the content of the pre element in the second mountNode. This is React's smart diffing algorithm in action. It only regenerates in its DOM node what actually needs to be regenerated, while it keeps everything else the same. This diffing process is possible because of React's virtual DOM and the fact that we have a representation of our user interface in memory because we wrote it in JavaScript. For every tick in this example, React keeps the last UI version in memory, and when it has a new one to take to the browser, that new UI version will also be in memory. So React can compute the difference between the new and the old versions. In this example, the difference was the content of the pre element. React will then instruct the browser to update only the computed diff and not the whole DOM node. No matter how many times we regenerate our interface, React will take to the browser only the new partial updates. The React way is not only a lot more efficient, but it also removes a big layer of complexity about the way we think about updating user interfaces. Having React do all the computations about whether we should or should not update the DOM enables us to focus on thinking about our data and state and the way to model that state.
 
-### First react app
-
-```
-  npm init -y
-  npm install react react-dom next
-  // add hello world component
-```
-
-[lab-00] (https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
-
-### App from create react app
-
-```
-  npx create-react-app my-app
-  cd my-app
-  npm start
-  // add hello world component
-```
-
 ### Function component vs class components
 
-#### LAB01 - Class Component
+#### LAB01 - Class Component & function component
+
+##### Requirements:
+
+- 2 components named: [HelloClassComponent,HelloFunctionalComponent]
+- HelloClassComponent output should be "hello, I am a {typeComponent}" where typeComponent==="Class component"
+- HelloFunctinalComponent output should be "hello, I am a {typeComponent}" where typeComponent==="Functional component"
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-end)
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-solution)
 
 - public code
 - the need for import React from "react"; to all react components
@@ -225,12 +239,6 @@ Goal of this section, get familiar with dev environment, hands on first app deve
 - explain render
 - the state of class components
 
-#### LAB02 - Function component
-
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
-
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-02-end)
-
 - difference between function & class components
   - (Function) is just a plain JavaScript function that accepts props as an argument and returns a React element. (Class) requires you to extend from React. Component and create a render function which returns a React element.
   - (Function) There is no render method used in functional components. (Class) It must have the render() method returning JSX (which is syntactically similar to HTML)
@@ -238,33 +246,76 @@ Goal of this section, get familiar with dev environment, hands on first app deve
   - React lifecycle methods cannot be used in function components while class components can.
   - (Function) Hooks can be easily used in functional components to make them Stateful. (Class) It requires different syntax inside a class component to implement hooks.
 - Why use Function components instead
+
   - same performance but less code and arguablby cleaner aproach
   - with use of hooks you can archive all functionality class offer in a functional aproach.
   - Currently the development community favour the use of functional components and the use of hooks to manage the component state. so thats the aproach we will favour for now on.
 
-### State and Lifecycle [link] (https://reactjs.org/docs/state-and-lifecycle.html)
+- Quick mention to teach that JSX only interpolates strings , convert automatically numbers into strings, arrays into strings (values sequences) and simple javascript evaluations. Objects will lead to error
+- click event paramtereless and with parameter
 
-#### LAB03 - State
+### State
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-start)
+#### State hook: useState (built-in)
 
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-end)
+In a nutchel, hooks allows you to use state and other React features without writing a class.
+State in component context is basically the data we use in that point in time on that component
+by default a property is not reactive, wich means react will not update a component each time any prop gets updated. one way to turn prop reactive is atatch it to the react state by using the hook useState.
+All links start with prefix use be convention
+useState provide you a way to make a reactive value and provide you a way to change it anytime you want
+invoque the function useState and accepts an parameter for its initial value. this initial value will only be used once. usestate will return 2 values, so we store them as variables, most commonly usincg destructing js method. first returned value is the value itself ex: name, second is the function that change it. by convention is set prefix plus the prop value.
 
-- componentDidMount
-- componentWillUnmount
-- use setState
+- You can use the State Hook more than once in a single component:
+  - const [age, setAge] = useState(42);
+  - const [fruit, setFruit] = useState('banana');
 
-### React Hook - first look
+### events
 
-#### LAB03 - React hook
-
-### Combine components and its reusability
+- how react atatch a function to a event
+- wrap a function with parameters in a annonymous function
+- automatic event object
 
 ```
-  // combine multiple components, pass props and trigger events
-  - challange add increment as prop
+  // Function component with state hook
+  // start with normal const to demonstrate non reactive variables, then evolve to bellow solution
+  import React, { useState } from 'react';
 
+  function Example() {
+    // Declare a new state variable, which we'll call "count"
+    const [name, setName] = useState(Joao Neves);
+    const [age, setage] = useState(37);
+
+    return (
+      <div>
+        <p>ToSpanish</p>
+        <button onClick={() => {
+          setName("Juan Nieves");
+          setAge(65);
+        }}>
+          Click me
+        </button>
+      </div>
+    );
 ```
+
+#### LAB02 - State & events
+
+##### Requirements:
+
+- implement a counter display.
+- the counter will start as 0 and increment by 1 each time a user click a button
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-02-solution)
+
+- To Remember:
+  - Calling useState will declare a “state variable”. Our variable is called count.
+  - useState returns a pair: the current state value and a function that lets you update it.
+  - The only argument to useState is the initial state.
+  - The initial state argument is only used during the first render.
+  - We declare a state variable called count, and set it to 0. React will remember its current value between re-renders, and provide the most recent one to our function. If we want to update the current count, we can call setCount.
+  - Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes
 
 // Wrong
 this.setState({
@@ -276,16 +327,103 @@ this.setState((state, props) => ({
 counter: state.counter + props.increment
 }));
 
-```
+### Lifecycle [link] (https://reactjs.org/docs/state-and-lifecycle.html)
 
-```
+- componentDidMount
+- componentWillUnmount
+- use setState
 
-#### LAB04 - multi component page
+#### LAB03 - lifecycle
+
+##### Requirements:
+
+- implement a clock display (text that display current date and time time until seconds)
+- make user of:
+  - componentDidMount
+  - componentWillUnmount
+  - useState
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
+
+### React Lists
+
+#### LAB04 - Lists - _To code along_
+
+Starting of main Lab app - Todo List.
+Todo object:
+
+- id
+- name
+- description
+- duedate
+- priority level [1,2,3]
+- label
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
+
+iterate items in a list
+mention key tag is for react keep track on the dom as its outputit, must be unique in items list
+
+### Combine multiple Components ans its reusability
+
+#### LAB05 - components integration
+
+##### Requirements:
+
+- add pass list to a component named TodoList. Pass todo content to another component named TodoItem
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)
+
+- React developer tools add plugin and showcase
+
+#### LAB06 - Challange - remove item
+
+##### Requirements:
+
+- add a button on each TodoItem that remove the item from the list being displayed
+  [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)
+  [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution)
+
+  - mention the way to extraxt directly const from the props.
+
+#### Effect hook: useEffect (built-in)
+
+- Effects term is commonly used to refer to operations that have some "side effect" on app like for example data fetching, subscriptions, or manually changing the DOM from React components
+- useEffects is the built in hook for tacke this cases.
+- Use effects run a funtion on every render of the component (on init, on changhes)
+- useEffects first as an argument is to declare the function it will run everytime. as an optional second argument you can pass what is called dependency array - an array of ... If not declared, it will run everytime, If declared as empty it will only run on initial render other wise it will run aswell on dependency state values
+
+#### To remember
+
+- Don’t call Hooks inside loops, conditions, or nested functions.
+- Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks.
+- The state of each component is completely independent. Hooks are a way to reuse stateful logic, not state itself. In fact, each call to a Hook has a completely isolated state
+
+#### Custom Hooks
+
+Custom Hooks are more of a convention than a feature. If a function’s name starts with ”use” and it calls other Hooks, we say it is a custom Hook. The useSomething naming convention is how our linter plugin is able to find bugs in the code using Hooks.
+You can write custom Hooks that cover a wide range of use cases like form handling, animation, declarative subscriptions, timers, and probably many more we haven’t considered. We are excited to see what custom Hooks the React community will come up with.
+
+#### Hooks api reference
+
+https://reactjs.org/docs/hooks-reference.html
+
+#### LAB04 - React hook
+
+### Combine components and its reusability
+
+#### LAB05 - multi component page (first lab of integrated lab)
 
 ```
   // Given a predefined layout
   // Header, List, item
 ```
+
+talk and draw a component tree
 
 #### React Context [Link](https://reactjs.org/docs/context.html)
 
@@ -295,9 +433,9 @@ counter: state.counter + props.increment
 
 ### REST service API
 
-#### LAB05 - API - from LAB04 add Real API CALL
+#### LAB06 - API - from LAB04 add Real API CALL
 
-#### LAB06 - API - from LAB05 Add POST, DELETE
+#### LAB07 - API - from LAB05 Add POST, DELETE
 
 ## Dev tools, debugging & performance monitoring
 
@@ -306,15 +444,15 @@ counter: state.counter + props.increment
 
 ## Styling React components
 
-### LAB07 - style
+### LAB08 - style
 
 ## Testing react components
 
-### LAB08 - test
+### LAB09 - test
 
 ## Forms in react [link](https://reactjs.org/docs/forms.html)
 
-### LAB09 - Form
+### LAB010 - Form
 
 ## React hooks deep dive
 
@@ -322,15 +460,15 @@ counter: state.counter + props.increment
 - effect hooks [link](https://reactjs.org/docs/hooks-effect.html)
 - custom hooks [link](https://reactjs.org/docs/hooks-custom.html)
 
-### LAB10 - hooks advanced
+### LAB11 - hooks advanced
 
 ## Redux deep dive
 
-### LAB11 - redux sample
+### LAB12 - redux sample
 
 ## React Security
 
-### LAB12 - implementing seccurity features
+### LAB13 - implementing seccurity features
 
 ## React Best practices
 
