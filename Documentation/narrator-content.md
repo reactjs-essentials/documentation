@@ -439,7 +439,7 @@ _TO TALK ABOUT:_
 - update code to read from just created api
 - Explain how React execute REST API Calls
 
-#### LAB07 - (todo app part 05) API challange
+#### LAB09 - (todo app part 05) API challange
 
 Requirements:
 
@@ -447,21 +447,21 @@ Requirements:
 
 ## Styling React components
 
-### LAB08 - style
+### LAB10 - style
 
 ## Testing react components
 
-### LAB09 - test
+### LAB11 - test
 
 ## Forms in react [link](https://reactjs.org/docs/forms.html)
 
-### LAB010 - Form
+### LAB012 - Form
 
 ## React hooks deep dive
 
 - custom hooks [link](https://reactjs.org/docs/hooks-custom.html)
 
-### LAB11 - hooks advanced
+### LAB13 - hooks advanced
 
 ## Dev tools, debugging & performance monitoring
 
@@ -471,11 +471,11 @@ Requirements:
 
 ## Redux deep dive
 
-### LAB12 - redux sample
+### LAB14 - redux sample
 
 ## React Security
 
-### LAB13 - implementing seccurity features
+### LAB15 - implementing seccurity features
 
 ## React Best practices
 
