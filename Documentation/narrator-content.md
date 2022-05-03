@@ -85,46 +85,45 @@ When you need to work with asynchronous operations, usually have to deal with pr
 
 ### History
 
-    Facebook created React in 2011 for their own use on facebook.com, one of the highest trafficked websites in the world. React was then utilized by Instagram a year later in 2012. After already using React internally for two years, Facebook open sourced React in 2013. Some initially dismissed it because React ran contrary to popular practices by placing markup and logic together in a single file. But as more people experimented with the library, many embraced the new component‑centric philosophy for separating concerns. Each React component is a separate concern. A year later, in 2014, React had grown significantly in popularity and was embraced by many notable companies outside of Facebook. Today, there are over 50,000 React components in production at Facebook. Facebook is deeply committed to React since it also uses React on Instagram and React Native for mobile development. Today, Facebook employs a full‑time React development staff that regularly releases bug fixes, enhancements, blog posts, and documentation. And as you'll see soon, many large, well‑respected Fortune 500 companies utilize React in production too.
+Facebook created React in 2011 for their own use on facebook.com, one of the highest trafficked websites in the world. React was then utilized by Instagram a year later in 2012. After already using React internally for two years, Facebook open sourced React in 2013. Some initially dismissed it because React ran contrary to popular practices by placing markup and logic together in a single file. But as more people experimented with the library, many embraced the new component‑centric philosophy for separating concerns. Each React component is a separate concern. A year later, in 2014, React had grown significantly in popularity and was embraced by many notable companies outside of Facebook. Today, there are over 50,000 React components in production at Facebook. Facebook is deeply committed to React since it also uses React on Instagram and React Native for mobile development. Today, Facebook employs a full‑time React development staff that regularly releases bug fixes, enhancements, blog posts, and documentation. And as you'll see soon, many large, well‑respected Fortune 500 companies utilize React in production too.
 
 ### Basics
 
-    React has three simple and fundamental concepts. The first concept is its components. With React, we describe user interfaces using components. Simple React components are actually just vanilla JavaScript functions. In any programming language, we invoke functions with some input, and they give us some output in return. We can reuse functions as needed and compose bigger functions from smaller ones. React components are exactly the same. They receive certain input objects, and they output a description of a user interface. We can reuse a single component in multiple user interfaces, and components can contain other components. However, you don't really invoke a React component. You just use it in your HTML as if it was just a regular HTML element. Unlike pure functions, a React component can have a private state to hold any data that may change over the lifecycle of the component Init's nature the reactive updates concept. React's name is a simple explanation for this concept. When the state of a React component, the input, changes, the user interface it represents, the output, changes as well. This change in the description of the user interface has to be reflected in the device we are working with. In a browser, we need to regenerate the HTML views in the DOM tree. With React, we don't need to worry about how to reflect these changes or even manage when to take changes to the browser. React will simply react to the changes in a component's state and automatically update the parts of the DOM that need to be updated. The third concept about React is its virtual representation of views in memory. To build HTML web applications with React, we don't write HTML at all. We use JavaScript to generate HTML. When your web application receives just the data from the server in the background with AJAX, you need something more than HTML to work with that data, and you have two options. You can use an enhanced HTML template that has loops and conditionals, or you can rely on the power of JavaScript itself to generate the HTML from the data. Both approaches have advantages and disadvantages. React embraces the latter one and eliminates the extra step needed to parse and enhance the HTML template. One big advantage for this HTML in JavaScript approach is how it enables React to keep and use a virtual representation of HTML views in memory, which is commonly known as the virtual DOM, or the tree reconciliation algorithm. React uses the virtual DOM to compare versions of the UI in memory before it acts on them. I'll show you the practical value of that once we're comfortable with the basic syntax of React. A React component can be one of two types. It can be either a function component or a class component. Both types can be stateful and have side effects, or they can be purely presentational. Both types can be compared to regular functions when it comes to their contract. They use a set of props and state as their input, and they output what looks like HTML, but is really a special JavaScript syntax called JSX. The props input is an explicit one. It is similar to the list of attributes an HTML element can have. The state input is an internal one, but is really the more interesting one because of how React uses it to auto‑reflect changes in the browser. These two input objects have one important difference. Within a component, the state object can be changed while the props object represents fixed values. Props are immutable. Components can only change their internal state, not their properties. This is a core idea to understand in React. ´´´example´´´
+React has three simple and fundamental concepts. The first concept is its components. With React, we describe user interfaces using components. Simple React components are actually just vanilla JavaScript functions. In any programming language, we invoke functions with some input, and they give us some output in return. We can reuse functions as needed and compose bigger functions from smaller ones. React components are exactly the same. They receive certain input objects, and they output a description of a user interface. We can reuse a single component in multiple user interfaces, and components can contain other components. However, you don't really invoke a React component. You just use it in your HTML as if it was just a regular HTML element. Unlike pure functions, a React component can have a private state to hold any data that may change over the lifecycle of the component Init's nature the reactive updates concept. React's name is a simple explanation for this concept. When the state of a React component, the input, changes, the user interface it represents, the output, changes as well. This change in the description of the user interface has to be reflected in the device we are working with. In a browser, we need to regenerate the HTML views in the DOM tree. With React, we don't need to worry about how to reflect these changes or even manage when to take changes to the browser. React will simply react to the changes in a component's state and automatically update the parts of the DOM that need to be updated. The third concept about React is its virtual representation of views in memory. To build HTML web applications with React, we don't write HTML at all. We use JavaScript to generate HTML. When your web application receives just the data from the server in the background with AJAX, you need something more than HTML to work with that data, and you have two options. You can use an enhanced HTML template that has loops and conditionals, or you can rely on the power of JavaScript itself to generate the HTML from the data. Both approaches have advantages and disadvantages. React embraces the latter one and eliminates the extra step needed to parse and enhance the HTML template. One big advantage for this HTML in JavaScript approach is how it enables React to keep and use a virtual representation of HTML views in memory, which is commonly known as the virtual DOM, or the tree reconciliation algorithm. React uses the virtual DOM to compare versions of the UI in memory before it acts on them. I'll show you the practical value of that once we're comfortable with the basic syntax of React. A React component can be one of two types. It can be either a function component or a class component. Both types can be stateful and have side effects, or they can be purely presentational. Both types can be compared to regular functions when it comes to their contract. They use a set of props and state as their input, and they output what looks like HTML, but is really a special JavaScript syntax called JSX. The props input is an explicit one. It is similar to the list of attributes an HTML element can have. The state input is an internal one, but is really the more interesting one because of how React uses it to auto‑reflect changes in the browser. These two input objects have one important difference. Within a component, the state object can be changed while the props object represents fixed values. Props are immutable. Components can only change their internal state, not their properties. This is a core idea to understand in React. ´´´example´´´
 
 ### Why React?
 
 #### Flexibility
 
-    Can build user interfaces for a huge variety of platforms and use cases. React is remarkably flexible. React embeds fewer opinions than it's competition, so it's more flexible than opinionated frameworks like Angular and Ember. React is a library, not a framework. And as you're about to see, React's library approach has allowed it to evolve into a remarkably flexible tool. When React was initially created, it had a single, focused use case. It was for creating components for web applications. However, as React has grown in popularity, its ecosystem has grown to cover a variety of use cases. You can generate static sites with React using popular tools like Gatsby and Phenomic. You can use React to build truly native mobile applications using React Native. And with great tools like Electron, you can even create installable desktop apps that run on Mac and Windows using web technologies like React. React also supports server rendering out of the box, and popular frameworks like Next.js make it really easy to set up. In summary, learn React once, and you can write applications just about everywhere. React is highly versatile because the renderer is separate from React itself. For web apps, you call react‑dom to render your components to HTML. For React Native, you use react‑native to render React components into native‑friendly code. Since React is a lightweight library, you can use it with existing apps too, even server‑side rendered apps. In fact, that's precisely what React was designed for. Facebook used React to slowly replace its server‑side rendered PHP application. You can start with small portions of the page like this, then move on to slightly larger portions of the page, and eventually rebuild the entire page by slowly replacing larger sections with React. It's a low‑risk way to migrate an existing app to React or to use React in places where it's most valuable. Finally, since React is used heavily by Facebook, you can trust that it will continue to run reliably in all popular browsers, including recent versions of Internet Explorer. Of course, Facebook can't afford to have its website only run on some browsers.
+Can build user interfaces for a huge variety of platforms and use cases. React is remarkably flexible. React embeds fewer opinions than it's competition, so it's more flexible than opinionated frameworks like Angular and Ember. React is a library, not a framework. And as you're about to see, React's library approach has allowed it to evolve into a remarkably flexible tool. When React was initially created, it had a single, focused use case. It was for creating components for web applications. However, as React has grown in popularity, its ecosystem has grown to cover a variety of use cases. You can generate static sites with React using popular tools like Gatsby and Phenomic. You can use React to build truly native mobile applications using React Native. And with great tools like Electron, you can even create installable desktop apps that run on Mac and Windows using web technologies like React. React also supports server rendering out of the box, and popular frameworks like Next.js make it really easy to set up. In summary, learn React once, and you can write applications just about everywhere. React is highly versatile because the renderer is separate from React itself. For web apps, you call react‑dom to render your components to HTML. For React Native, you use react‑native to render React components into native‑friendly code. Since React is a lightweight library, you can use it with existing apps too, even server‑side rendered apps. In fact, that's precisely what React was designed for. Facebook used React to slowly replace its server‑side rendered PHP application. You can start with small portions of the page like this, then move on to slightly larger portions of the page, and eventually rebuild the entire page by slowly replacing larger sections with React. It's a low‑risk way to migrate an existing app to React or to use React in places where it's most valuable. Finally, since React is used heavily by Facebook, you can trust that it will continue to run reliably in all popular browsers, including recent versions of Internet Explorer. Of course, Facebook can't afford to have its website only run on some browsers.
 
 #### Developer Experience
 
-    Once your team tries React, they'll likely fall in love. The rapid feedback development experience combined with React's small, logical API creates a development experience that's very hard to beat. React is special because it offers a simple API that's easy to learn. There are very few concepts to master. React's API is so small and straightforward that developers rarely need to check the docs. It's basically a function that returns what looks like HTML. React just handles HTML with JavaScript. React encourages you to get better at JavaScript, and in doing so, you also get better at React.
+Once your team tries React, they'll likely fall in love. The rapid feedback development experience combined with React's small, logical API creates a development experience that's very hard to beat. React is special because it offers a simple API that's easy to learn. There are very few concepts to master. React's API is so small and straightforward that developers rarely need to check the docs. It's basically a function that returns what looks like HTML. React just handles HTML with JavaScript. React encourages you to get better at JavaScript, and in doing so, you also get better at React.
 
 #### Corporate Investment
 
-    Many well‑respected corporations are deeply invested in React and its ecosystem today. React was created by Facebook, so of course React is heavily used on Facebook, one of the highest trafficked apps in the world, as well as Facebook's other properties, such as Instagram and WhatsApp. Facebook is deeply committed to React.
+Many well‑respected corporations are deeply invested in React and its ecosystem today. React was created by Facebook, so of course React is heavily used on Facebook, one of the highest trafficked apps in the world, as well as Facebook's other properties, such as Instagram and WhatsApp. Facebook is deeply committed to React.
 
 #### Community
 
-    Huge active community. Since 2013, React's popularity has steadily grown to over 140,000 stars today. This makes React one of the most popular repositories on GitHub. Today, React has over 1000 contributors. Only two repos have more stars on GitHub than React. React npm package is downloaded over 6 million times every single week. Today, many of the world's most respected companies use React, including Apple, Netflix, Amazon, Airbnb, PayPal, and many more. Microsoft open sourced a large React component library for making user interfaces that have a look and feel like Office. It's called Fabric. Material‑UI offers a set of React components that implement Google's Material Design guidelines. React Bootstrap is a popular library that contains React components that make it easy to work with Bootstrap. And there are literally hundreds of interesting, standalone React components out there on GitHub that you might find useful. Check out the awesome‑react list on GitHub for a long list of additional components. Deep community investment has led to a wide variety of mature, related projects. Do you need routing? Well, check out React Router. Do you want to handle complex data flows using a library? Well, Redux and MobX are two popular options to consider today. Do you want to set up automated testing? We'll check out Jest, which is also from Facebook. Want an alternative to RESTful API calls where you can declare your API calls on the client? Try out GraphQL. Want to quickly set up a server‑side rendered site in React with Node? Then try Next.js. Of course, this just scratches the surface of the ecosystem. This list could go on and on. So, uh, I guess you could say that React is kind of a big deal right now.
-    - library vs framework
+Huge active community. Since 2013, React's popularity has steadily grown to over 140,000 stars today. This makes React one of the most popular repositories on GitHub. Today, React has over 1000 contributors. Only two repos have more stars on GitHub than React. React npm package is downloaded over 6 million times every single week. Today, many of the world's most respected companies use React, including Apple, Netflix, Amazon, Airbnb, PayPal, and many more. Microsoft open sourced a large React component library for making user interfaces that have a look and feel like Office. It's called Fabric. Material‑UI offers a set of React components that implement Google's Material Design guidelines. React Bootstrap is a popular library that contains React components that make it easy to work with Bootstrap. And there are literally hundreds of interesting, standalone React components out there on GitHub that you might find useful. Check out the awesome‑react list on GitHub for a long list of additional components. Deep community investment has led to a wide variety of mature, related projects. Do you need routing? Well, check out React Router. Do you want to handle complex data flows using a library? Well, Redux and MobX are two popular options to consider today. Do you want to set up automated testing? We'll check out Jest, which is also from Facebook. Want an alternative to RESTful API calls where you can declare your API calls on the client? Try out GraphQL. Want to quickly set up a server‑side rendered site in React with Node? Then try Next.js. Of course, this just scratches the surface of the ecosystem. This list could go on and on. So, uh, I guess you could say that React is kind of a big deal right now. - library vs framework
 
 #### Testability
 
-    Typically, testing a front end is hard, that's why so few teams do comprehensive front end testing, but React is attractive and noteworthy because its design is very friendly to automated testing. With React, the vast majority of your components can be plain pure functions. A pure function always returns the same output for a given input, it has no side effects. React's functional component style makes it trivial to test your component since it's pure. For example, if I set the message prop to world for this component, it will always output a div that contains the text, Hello World. It's reliable, deterministic, and it has no side effects. It relies upon no global state, and while this is a simple example, this design can scale the highly complex user interfaces. There is a wide variety of JavaScript testing frameworks available, and since React is just javascript, any one of these will work just great. But for React, the most popular choice today is Jest. Jest was created by Facebook and Jest makes it trivial to get started doing automated testing in React. Jest is built in to create React app. Every time you hit Save, it automatically runs any affected tests. This instant feedback can rapidly speed development.
+Typically, testing a front end is hard, that's why so few teams do comprehensive front end testing, but React is attractive and noteworthy because its design is very friendly to automated testing. With React, the vast majority of your components can be plain pure functions. A pure function always returns the same output for a given input, it has no side effects. React's functional component style makes it trivial to test your component since it's pure. For example, if I set the message prop to world for this component, it will always output a div that contains the text, Hello World. It's reliable, deterministic, and it has no side effects. It relies upon no global state, and while this is a simple example, this design can scale the highly complex user interfaces. There is a wide variety of JavaScript testing frameworks available, and since React is just javascript, any one of these will work just great. But for React, the most popular choice today is Jest. Jest was created by Facebook and Jest makes it trivial to get started doing automated testing in React. Jest is built in to create React app. Every time you hit Save, it automatically runs any affected tests. This instant feedback can rapidly speed development.
 
 ### Framework vs. Library
 
-    Competitors like Angular and Ember are frameworks. React, in contrast, is generally considered a library since it's lean and focused on components. Now a framework isn't fundamentally better than a library. It's a tradeoff. A framework contains more opinions, so you can avoid spending time trying to choose between many options. This reduces decision fatigue, and there's often less setup overhead. Frameworks can help enforce consistency since most frameworks are more opinionated. However, React's Library approach also has some clear advantages. At only around 35K Gzipped, React is significantly smaller than most frameworks. This means that it's small enough that you can sprinkle it on existing applications so that you can slowly migrate an existing app to React, even a server‑side rendered app. React doesn't force many decisions on you. It allows you to only pull in the features that you need to keep your app lean and fast. You're free to pick the precise technologies that you need for your project, and you're free to select the best technology for your use case as well. Decision fatigue is also largely a solved problem with React because opinionated boiler plates, like create‑react‑app, effectively turn React into an optional framework. Now since React is a focused component library, more comprehensive frameworks like Angular come bundled with more features, including testing, a library for HTTP calls, routing, and internationalization all built in. In contrast with React, you select the pieces that apply to your use case and you add them in. Since React is very popular, there's almost certainly a mature library that does what you need.
+Competitors like Angular and Ember are frameworks. React, in contrast, is generally considered a library since it's lean and focused on components. Now a framework isn't fundamentally better than a library. It's a tradeoff. A framework contains more opinions, so you can avoid spending time trying to choose between many options. This reduces decision fatigue, and there's often less setup overhead. Frameworks can help enforce consistency since most frameworks are more opinionated. However, React's Library approach also has some clear advantages. At only around 35K Gzipped, React is significantly smaller than most frameworks. This means that it's small enough that you can sprinkle it on existing applications so that you can slowly migrate an existing app to React, even a server‑side rendered app. React doesn't force many decisions on you. It allows you to only pull in the features that you need to keep your app lean and fast. You're free to pick the precise technologies that you need for your project, and you're free to select the best technology for your use case as well. Decision fatigue is also largely a solved problem with React because opinionated boiler plates, like create‑react‑app, effectively turn React into an optional framework. Now since React is a focused component library, more comprehensive frameworks like Angular come bundled with more features, including testing, a library for HTTP calls, routing, and internationalization all built in. In contrast with React, you select the pieces that apply to your use case and you add them in. Since React is very popular, there's almost certainly a mature library that does what you need.
 
 ### Template-centric vs. JavaScript-centric
 
-    Angular, Vue, and Ember seek to make HTML more powerful by inventing their own unique syntax for writing code in HTML. React takes the exact opposite approach and instead utilizes the power of JavaScript to handle HTML. With React, It's preferable because the syntax is plain JavaScript. React has very little unique syntax to learn. And since React embraces JavaScript, you don't have to learn a new vocabulary to describe the new features that other template‑centric libraries like Angular add to HTML. Most of what you write in React is really just plain JavaScript. This leads to less typing and less code, which I find produces a result that's easier to read and debug. Finally, React's JavaScript‑centric approach encourages improving your JavaScript skills.
+Angular, Vue, and Ember seek to make HTML more powerful by inventing their own unique syntax for writing code in HTML. React takes the exact opposite approach and instead utilizes the power of JavaScript to handle HTML. With React, It's preferable because the syntax is plain JavaScript. React has very little unique syntax to learn. And since React embraces JavaScript, you don't have to learn a new vocabulary to describe the new features that other template‑centric libraries like Angular add to HTML. Most of what you write in React is really just plain JavaScript. This leads to less typing and less code, which I find produces a result that's easier to read and debug. Finally, React's JavaScript‑centric approach encourages improving your JavaScript skills.
 
 ### Separate vs. Single File
 
-    Patterns like MVC popularized separating the model, view, and controller into three separate files. Traditionally, for web apps, this means that the view is HTML. The model declares the data for the view in JavaScript, and the controller controls the interactions with the model. In contrast, with React, each component is an autonomous concern. Each component stands on its own and can be composed with other components to build rich, complex UIs. This means markup and logic are colocated in the same file. When React was introduced in 2013, people were very skeptical, and for good reason. React's design ran against the current best practice of placing HTML templates and JavaScript logic in separate files. In React, each component contains both logic and markup in the same file, so on the surface, this feels like it violates the principle of separation of concerns. However, in React, you think about separation of concerns differently. Traditional separation of concerns often fixates on placing each technology in a separate file. So in web development, this means placing HTML, CSS, and JS in separate files. But React recognizes that while these are indeed separate technologies, they must be carefully composed together to do anything useful. So in React, each component is a separate concern. React's component approach lends itself well to building complex Uis by breaking your page down into small, autonomous pieces that you can reason about and test in isolation.
+Patterns like MVC popularized separating the model, view, and controller into three separate files. Traditionally, for web apps, this means that the view is HTML. The model declares the data for the view in JavaScript, and the controller controls the interactions with the model. In contrast, with React, each component is an autonomous concern. Each component stands on its own and can be composed with other components to build rich, complex UIs. This means markup and logic are colocated in the same file. When React was introduced in 2013, people were very skeptical, and for good reason. React's design ran against the current best practice of placing HTML templates and JavaScript logic in separate files. In React, each component contains both logic and markup in the same file, so on the surface, this feels like it violates the principle of separation of concerns. However, in React, you think about separation of concerns differently. Traditional separation of concerns often fixates on placing each technology in a separate file. So in web development, this means placing HTML, CSS, and JS in separate files. But React recognizes that while these are indeed separate technologies, they must be carefully composed together to do anything useful. So in React, each component is a separate concern. React's component approach lends itself well to building complex Uis by breaking your page down into small, autonomous pieces that you can reason about and test in isolation.
 
 ## React Getting Started
 
@@ -149,12 +148,14 @@ intruducing [lab-00] (https://stackblitz.com/github/reactjs-essentials/training-
   // add hello world component
 ```
 
-- node modules
-- src
-- index.html
-- index.js
-- package.json
-- scripts inside package.json
+_TALK ABOUT:_
+
+- node modules\_
+- src\_
+- index.html\_
+- index.js\_
+- package.json\_
+- scripts inside package.json\_
 
 ### React basic concepts & conventions
 
@@ -229,28 +230,26 @@ intruducing [lab-00] (https://stackblitz.com/github/reactjs-essentials/training-
 - HelloClassComponent output should be "hello, I am a {typeComponent}" where typeComponent==="Class component"
 - HelloFunctinalComponent output should be "hello, I am a {typeComponent}" where typeComponent==="Functional component"
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-solution)
 
+_TALK ABOUT:_
+
 - public code
-- the need for import React from "react"; to all react components
 - the need of reference another react components to use
 - explain this.props
 - explain render
 - the state of class components
-
-- difference between function & class components
+- difference between function & class components:
   - (Function) is just a plain JavaScript function that accepts props as an argument and returns a React element. (Class) requires you to extend from React. Component and create a render function which returns a React element.
   - (Function) There is no render method used in functional components. (Class) It must have the render() method returning JSX (which is syntactically similar to HTML)
   - (Function) Also known as Stateless components as they simply accept data and display them in some form, that they are mainly responsible for rendering UI. (Class) Also known as Stateful components because they implement logic and state.
   - React lifecycle methods cannot be used in function components while class components can.
   - (Function) Hooks can be easily used in functional components to make them Stateful. (Class) It requires different syntax inside a class component to implement hooks.
 - Why use Function components instead
-
   - same performance but less code and arguablby cleaner aproach
   - with use of hooks you can archive all functionality class offer in a functional aproach.
   - Currently the development community favour the use of functional components and the use of hooks to manage the component state. so thats the aproach we will favour for now on.
-
 - Quick mention to teach that JSX only interpolates strings , convert automatically numbers into strings, arrays into strings (values sequences) and simple javascript evaluations. Objects will lead to error
 - click event paramtereless and with parameter
 
@@ -305,17 +304,17 @@ invoque the function useState and accepts an parameter for its initial value. th
 - implement a counter display.
 - the counter will start as 0 and increment by 1 each time a user click a button
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
-
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-02-solution)
 
-- To Remember:
-  - Calling useState will declare a “state variable”. Our variable is called count.
-  - useState returns a pair: the current state value and a function that lets you update it.
-  - The only argument to useState is the initial state.
-  - The initial state argument is only used during the first render.
-  - We declare a state variable called count, and set it to 0. React will remember its current value between re-renders, and provide the most recent one to our function. If we want to update the current count, we can call setCount.
-  - Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes
+_TO TALK ABOUT:_
+
+- Calling useState will declare a “state variable”. Our variable is called count.
+- useState returns a pair: the current state value and a function that lets you update it.
+- The only argument to useState is the initial state.
+- The initial state argument is only used during the first render.
+- We declare a state variable called count, and set it to 0. React will remember its current value between re-renders, and provide the most recent one to our function. If we want to update the current count, we can call setCount.
+- Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes
 
 // Wrong
 this.setState({
@@ -327,11 +326,11 @@ this.setState((state, props) => ({
 counter: state.counter + props.increment
 }));
 
-### Lifecycle [link] (https://reactjs.org/docs/state-and-lifecycle.html)
+### Lifecycle [link] (https://reactjs.org/docs/state-and-lifecycle.html) _TO REMOVE???_
 
 - componentDidMount
 - componentWillUnmount
-- use setState
+- use setState instead
 
 #### LAB03 - lifecycle
 
@@ -343,15 +342,14 @@ counter: state.counter + props.increment
   - componentWillUnmount
   - useState
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
-
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
 
 ### React Lists
 
-#### LAB04\* - Lists - _To code along_
+#### LAB04 (todo app part 01) - Lists - _To code along_
 
-Starting of main Lab app - Todo List.
+Starting of the main Lab app - Todo List.
 Todo object:
 
 - id
@@ -361,35 +359,40 @@ Todo object:
 - priority level [1,2,3]
 - label
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
 
-iterate items in a list
-mention key tag is for react keep track on the dom as its outputit, must be unique in items list
+_TO TALK ABOUT:_
+
+- key tag is for react to keep track on the DOM as its output, must be unique in items list
 
 ### Combine multiple Components ans its reusability
 
-#### LAB05\* - components integration
+#### LAB05 (todo app part 02) - components integration
 
 ##### Requirements:
 
 - add pass list to a component named TodoList. Pass todo content to another component named TodoItem
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)
+
+_TO TALKABOUT:_
 
 - React developer tools add plugin and showcase
 - talk about component tree
 
-#### LAB06\* - Challange - remove item
+#### LAB06 (todo app part 03) - Challange - remove item
 
 ##### Requirements:
 
 - add a button on each TodoItem that remove the item from the list being displayed
-  [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)
+  [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)|
   [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution)
 
-  - mention the way to extraxt directly const from the props.
+_TO TALKABOUT:_
+
+- mention the way to extract directly const from the props.
 
 ### Effect hook: useEffect (built-in)
 
@@ -400,17 +403,19 @@ mention key tag is for react keep track on the dom as its outputit, must be uniq
 
 #### LAB07 - Effect hook demo _To code along_
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
-
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
 
+_TO REMEMBER:_
+
 - make sure to start with just callback function parameter, demo it, then add empty dependency array and demo it. finally add 2 state variable, and add just one to dependency array and demo it.
-
-#### To remember
-
 - Don’t call Hooks inside loops, conditions, or nested functions.
 - Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks.
 - The state of each component is completely independent. Hooks are a way to reuse stateful logic, not state itself. In fact, each call to a Hook has a completely isolated state
+
+### REST service API
+
+#### LAB08 -
 
 #### Custom Hooks
 
