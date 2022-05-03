@@ -349,7 +349,7 @@ counter: state.counter + props.increment
 
 ### React Lists
 
-#### LAB04 - Lists - _To code along_
+#### LAB04\* - Lists - _To code along_
 
 Starting of main Lab app - Todo List.
 Todo object:
@@ -369,7 +369,7 @@ mention key tag is for react keep track on the dom as its outputit, must be uniq
 
 ### Combine multiple Components ans its reusability
 
-#### LAB05 - components integration
+#### LAB05\* - components integration
 
 ##### Requirements:
 
@@ -379,8 +379,9 @@ mention key tag is for react keep track on the dom as its outputit, must be uniq
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)
 
 - React developer tools add plugin and showcase
+- talk about component tree
 
-#### LAB06 - Challange - remove item
+#### LAB06\* - Challange - remove item
 
 ##### Requirements:
 
@@ -390,12 +391,20 @@ mention key tag is for react keep track on the dom as its outputit, must be uniq
 
   - mention the way to extraxt directly const from the props.
 
-#### Effect hook: useEffect (built-in)
+### Effect hook: useEffect (built-in)
 
 - Effects term is commonly used to refer to operations that have some "side effect" on app like for example data fetching, subscriptions, or manually changing the DOM from React components
-- useEffects is the built in hook for tacke this cases.
+- useEffects is the built in hook for tackle this cases.
 - Use effects run a funtion on every render of the component (on init, on changhes)
 - useEffects first as an argument is to declare the function it will run everytime. as an optional second argument you can pass what is called dependency array - an array of ... If not declared, it will run everytime, If declared as empty it will only run on initial render other wise it will run aswell on dependency state values
+
+#### LAB07 - Effect hook demo _To code along_
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
+
+- make sure to start with just callback function parameter, demo it, then add empty dependency array and demo it. finally add 2 state variable, and add just one to dependency array and demo it.
 
 #### To remember
 
@@ -411,19 +420,6 @@ You can write custom Hooks that cover a wide range of use cases like form handli
 #### Hooks api reference
 
 https://reactjs.org/docs/hooks-reference.html
-
-#### LAB04 - React hook
-
-### Combine components and its reusability
-
-#### LAB05 - multi component page (first lab of integrated lab)
-
-```
-  // Given a predefined layout
-  // Header, List, item
-```
-
-talk and draw a component tree
 
 #### React Context [Link](https://reactjs.org/docs/context.html)
 
