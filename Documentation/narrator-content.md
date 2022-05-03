@@ -413,10 +413,6 @@ _TO REMEMBER:_
 - Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks.
 - The state of each component is completely independent. Hooks are a way to reuse stateful logic, not state itself. In fact, each call to a Hook has a completely isolated state
 
-### REST service API
-
-#### LAB08 -
-
 #### Custom Hooks
 
 Custom Hooks are more of a convention than a feature. If a function’s name starts with ”use” and it calls other Hooks, we say it is a custom Hook. The useSomething naming convention is how our linter plugin is able to find bugs in the code using Hooks.
@@ -434,14 +430,20 @@ https://reactjs.org/docs/hooks-reference.html
 
 ### REST service API
 
-#### LAB06 - API - from LAB04 add Real API CALL
+#### LAB08 - (todo app part 04) API creation _to code along_
 
-#### LAB07 - API - from LAB05 Add POST, DELETE
+_TO TALK ABOUT:_
 
-## Dev tools, debugging & performance monitoring
+- add json server package
+- move data into separate folder/file
+- update code to read from just created api
+- Explain how React execute REST API Calls
 
-- React Developer Tools
-- Handling production time errors with Error Boundaries
+#### LAB07 - (todo app part 05) API challange
+
+Requirements:
+
+- Update Delete Button to remove from API
 
 ## Styling React components
 
@@ -457,11 +459,15 @@ https://reactjs.org/docs/hooks-reference.html
 
 ## React hooks deep dive
 
-- state hook [link](https://reactjs.org/docs/hooks-state.html)
-- effect hooks [link](https://reactjs.org/docs/hooks-effect.html)
 - custom hooks [link](https://reactjs.org/docs/hooks-custom.html)
 
 ### LAB11 - hooks advanced
+
+## Dev tools, debugging & performance monitoring
+
+- React Developer Tools
+- Handling production time errors with Error Boundaries
+-
 
 ## Redux deep dive
 
