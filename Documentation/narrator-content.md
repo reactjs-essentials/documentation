@@ -222,7 +222,7 @@ _TALK ABOUT:_
 
 ### Function component vs class components
 
-#### LAB01 - Class Component & function component
+#### LAB01 - Class Component & function component _\*HandsOn_
 
 ##### Requirements:
 
@@ -297,7 +297,7 @@ invoque the function useState and accepts an parameter for its initial value. th
     );
 ```
 
-#### LAB02 - State & events
+#### LAB02 - State & events _\*HandsOn_
 
 ##### Requirements:
 
@@ -332,7 +332,7 @@ counter: state.counter + props.increment
 - componentWillUnmount
 - use setState instead
 
-#### LAB03 - lifecycle
+#### LAB03 - lifecycle _\*HandsOn_
 
 ##### Requirements:
 
@@ -347,17 +347,17 @@ counter: state.counter + props.increment
 
 ### React Lists
 
-#### LAB04 (todo app part 01) - Lists - _To code along_
+#### LAB04 (Movies app part 01) - Lists _\*CodeAlong_
 
-Starting of the main Lab app - Todo List.
-Todo object:
+Starting of the main Lab app - Movies app.
+Movies object:
 
 - id
-- name
-- description
-- duedate
-- priority level [1,2,3]
-- label
+- title
+- year
+- genre
+- director
+- actors
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
@@ -368,11 +368,11 @@ _TO TALK ABOUT:_
 
 ### Combine multiple Components ans its reusability
 
-#### LAB05 (todo app part 02) - components integration
+#### LAB05 (Movies app part 02) - components integration _\*HandsOn_
 
 ##### Requirements:
 
-- add pass list to a component named TodoList. Pass todo content to another component named TodoItem
+- add pass list to a component named FilmList. Pass Film content to another component named FilmItem
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)
@@ -382,11 +382,11 @@ _TO TALKABOUT:_
 - React developer tools add plugin and showcase
 - talk about component tree
 
-#### LAB06 (todo app part 03) - Challange - remove item
+#### LAB06 (movies app part 03) - Challange - remove item _\*HandsOn_
 
 ##### Requirements:
 
-- add a button on each TodoItem that remove the item from the list being displayed
+- add a button on each FilmItem that remove the item from the list being displayed
   [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)|
   [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution)
 
@@ -401,7 +401,7 @@ _TO TALKABOUT:_
 - Use effects run a funtion on every render of the component (on init, on changhes)
 - useEffects first as an argument is to declare the function it will run everytime. as an optional second argument you can pass what is called dependency array - an array of ... If not declared, it will run everytime, If declared as empty it will only run on initial render other wise it will run aswell on dependency state values
 
-#### LAB07 - Effect hook demo _To code along_
+#### LAB07 - Effect hook demo _\*CodeAlong_
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
@@ -412,6 +412,29 @@ _TO REMEMBER:_
 - Don’t call Hooks inside loops, conditions, or nested functions.
 - Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks.
 - The state of each component is completely independent. Hooks are a way to reuse stateful logic, not state itself. In fact, each call to a Hook has a completely isolated state
+
+## Server render
+
+### REST service API
+
+#### LAB08 - (movies app part 04) API creation _\*codeAlong_
+
+_TO TALK ABOUT:_
+
+- add json server package
+- move data into separate folder/file
+- update code to read from just created api
+- Explain how React execute REST API Calls
+
+#### LAB09 - (movies app part 05) API challange _\*HandsOn_
+
+Requirements:
+
+- Update Delete Button to remove from API
+
+## Styling React components
+
+### LAB10 - style _\*HandsOn_
 
 #### Custom Hooks
 
@@ -425,29 +448,6 @@ https://reactjs.org/docs/hooks-reference.html
 #### React Context [Link](https://reactjs.org/docs/context.html)
 
 - sharing of data between components without passing props (acts like global data)
-
-## Server render
-
-### REST service API
-
-#### LAB08 - (todo app part 04) API creation _to code along_
-
-_TO TALK ABOUT:_
-
-- add json server package
-- move data into separate folder/file
-- update code to read from just created api
-- Explain how React execute REST API Calls
-
-#### LAB09 - (todo app part 05) API challange
-
-Requirements:
-
-- Update Delete Button to remove from API
-
-## Styling React components
-
-### LAB10 - style
 
 ## Testing react components
 
