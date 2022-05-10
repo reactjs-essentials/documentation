@@ -350,14 +350,17 @@ counter: state.counter + props.increment
 #### LAB04 (Movies app part 01) - Lists _\*CodeAlong_
 
 Starting of the main Lab app - Movies app.
-Movies object:
 
-- id
-- title
-- year
-- genre
-- director
-- actors
+Requirements:
+
+- Add a component that list a collection of movies
+- Movies object:
+  - id
+  - title
+  - year
+  - genre
+  - director
+  - actors
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
@@ -417,7 +420,7 @@ _TO REMEMBER:_
 
 ### REST service API
 
-#### LAB08 - (movies app part 04) API creation _\*codeAlong_
+#### LAB08 - (movies app part 04) API communication _\*codeAlong_
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution)
@@ -427,7 +430,6 @@ _TO TALK ABOUT:_
 - talk about api mocha - https://apimocha.com/lab-films/films
 - Explain how React execute REST API Calls
 - Fetch data
-- handling errors
 - Conditional render filmList if films are still not fetched
 
 #### LAB09 - (movies app part 05) API challange _\*HandsOn_
@@ -436,7 +438,6 @@ Requirements:
 
 - loading while fetching
 - Update Delete Button to remove from API
-- Create an Add Button That remove from API
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution)
@@ -455,8 +456,6 @@ You can write custom Hooks that cover a wide range of use cases like form handli
 #### LAB11 - (movies app part 07) API handling errors with custom hooks _\*codeAlong_
 
 - Handling errors
-- Response errors
-- Interact with state properties along response errors
 - Create useFetch component
 
 #### Hooks api reference
@@ -468,9 +467,11 @@ https://reactjs.org/docs/hooks-reference.html
 
 ### Styling React components
 
-#### LAB11 - style _\*HandsOn_
+#### LAB11 - (movies app part 08) style _\*HandsOn_
 
 ### React Router ([see here](https://www.youtube.com/watch?v=aZGzwEjZrXc&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=21))
+
+#### LAB12 - (movies app part 09) Routing
 
 - Explain old school page request, and react aproach
 - install package react-router-dom
@@ -478,23 +479,23 @@ https://reactjs.org/docs/hooks-reference.html
 - Route match
 - Link Component
 
-#### React Context [Link](https://reactjs.org/docs/context.html)
+## Forms in react [link](https://reactjs.org/docs/forms.html)
+
+### LAB013 (movies app part 10) - Form
+
+## React Context [Link](https://reactjs.org/docs/context.html)
 
 - sharing of data between components without passing props (acts like global data)
 
 ## Testing react components
 
-### LAB12 - test
-
-## Forms in react [link](https://reactjs.org/docs/forms.html)
-
-### LAB013 - Form
+### LAB14 (movies app part 11) - test
 
 ## React hooks deep dive
 
 - custom hooks [link](https://reactjs.org/docs/hooks-custom.html)
 
-### LAB14 - hooks advanced
+### LAB15 - hooks advanced
 
 ## Dev tools, debugging & performance monitoring
 
@@ -504,11 +505,11 @@ https://reactjs.org/docs/hooks-reference.html
 
 ## Redux deep dive
 
-### LAB15 - redux sample
+### LAB16 - redux sample
 
 ## React Security
 
-### LAB16 - implementing seccurity features
+### LAB17 - implementing seccurity features
 
 ## React Best practices
 
