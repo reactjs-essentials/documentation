@@ -419,31 +419,64 @@ _TO REMEMBER:_
 
 #### LAB08 - (movies app part 04) API creation _\*codeAlong_
 
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution)
+
 _TO TALK ABOUT:_
 
-- add json server package
-- move data into separate folder/file
-- update code to read from just created api
+- talk about api mocha - https://apimocha.com/lab-films/films
 - Explain how React execute REST API Calls
+- Fetch data
+- handling errors
+- Conditional render filmList if films are still not fetched
 
 #### LAB09 - (movies app part 05) API challange _\*HandsOn_
 
 Requirements:
 
+- loading while fetching
 - Update Delete Button to remove from API
+- Create an Add Button That remove from API
 
-## Styling React components
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution)
 
-### LAB10 - style _\*HandsOn_
+#### LAB10 - (movies app part 06) API handling errors _\*codeAlong_
 
-#### Custom Hooks
+- Handling errors
+- Response errors
+- Interact with state properties along response errors
+
+### Custom Hooks
 
 Custom Hooks are more of a convention than a feature. If a function’s name starts with ”use” and it calls other Hooks, we say it is a custom Hook. The useSomething naming convention is how our linter plugin is able to find bugs in the code using Hooks.
-You can write custom Hooks that cover a wide range of use cases like form handling, animation, declarative subscriptions, timers, and probably many more we haven’t considered. We are excited to see what custom Hooks the React community will come up with.
+You can write custom Hooks that cover a wide range of use cases like form handling, animation, declarative subscriptions, timers, and probably many more we haven’t considered.
+
+#### LAB11 - (movies app part 07) API handling errors with custom hooks _\*codeAlong_
+
+- Handling errors
+- Response errors
+- Interact with state properties along response errors
+- Create useFetch component
 
 #### Hooks api reference
 
 https://reactjs.org/docs/hooks-reference.html
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-10-solution)
+
+### Styling React components
+
+#### LAB11 - style _\*HandsOn_
+
+### React Router ([see here](https://www.youtube.com/watch?v=aZGzwEjZrXc&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=21))
+
+- Explain old school page request, and react aproach
+- install package react-router-dom
+- Router & Switch components
+- Route match
+- Link Component
 
 #### React Context [Link](https://reactjs.org/docs/context.html)
 
@@ -451,17 +484,17 @@ https://reactjs.org/docs/hooks-reference.html
 
 ## Testing react components
 
-### LAB11 - test
+### LAB12 - test
 
 ## Forms in react [link](https://reactjs.org/docs/forms.html)
 
-### LAB012 - Form
+### LAB013 - Form
 
 ## React hooks deep dive
 
 - custom hooks [link](https://reactjs.org/docs/hooks-custom.html)
 
-### LAB13 - hooks advanced
+### LAB14 - hooks advanced
 
 ## Dev tools, debugging & performance monitoring
 
@@ -471,11 +504,11 @@ https://reactjs.org/docs/hooks-reference.html
 
 ## Redux deep dive
 
-### LAB14 - redux sample
+### LAB15 - redux sample
 
 ## React Security
 
-### LAB15 - implementing seccurity features
+### LAB16 - implementing seccurity features
 
 ## React Best practices
 
