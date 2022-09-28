@@ -497,12 +497,6 @@ https://reactjs.org/docs/hooks-reference.html
 
 ### LAB15 - hooks advanced
 
-## Dev tools, debugging & performance monitoring
-
-- React Developer Tools
-- Handling production time errors with Error Boundaries
--
-
 ## Redux deep dive
 
 ### LAB16 - redux sample
@@ -522,3 +516,10 @@ https://reactjs.org/docs/hooks-reference.html
 ### build run and deploy manually
 
 ### CI CD
+   
+   
+## Dev tools, debugging & performance monitoring
+
+- React Developer Tools
+- Handling production time errors with Error Boundaries
+-
