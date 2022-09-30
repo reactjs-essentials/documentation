@@ -6,7 +6,7 @@ import "./style.css";
 export default function App() {
   return (
     <div>
-      <h1>lab-01</h1>
+      <h1>lab-01-solution</h1>
       <HelloClassComponent type="Class component" />
       <HelloFunctionalComponent type="Functional component" />
     </div>
