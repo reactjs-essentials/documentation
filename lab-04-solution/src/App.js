@@ -1,10 +1,20 @@
 import React from "react";
 import "./style.css";
-import Home from "./Home";
+
+
 export default function App() {
+
+  const array = ['Primero', 'Segundo', 'Tercero']
+
   return (
-    <>
-      <Home />
-    </>
-  );
+    <div>
+      <ul>
+        {array.map((element, idx) => (
+          <li key={idx}>
+            {element}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
 }

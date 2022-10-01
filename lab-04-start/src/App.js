@@ -8,13 +8,7 @@ export default function App() {
 
   return (
     <div>
-      <ul>
-        {array.map((element, idx) => (
-          <li key={idx}>
-            {element}
-          </li>
-        ))}
-      </ul>
+        List
     </div>
   )
 }
