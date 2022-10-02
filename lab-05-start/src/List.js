@@ -2,14 +2,14 @@ import React from "react";
 import "./style.css";
 
 
-export default function App() {
+ const List = (props) => {
 
-  const array = ['Primero', 'Segundo', 'Tercero']
+  const data = props.items;
 
   return (
     <div>
       <ul>
-        {array.map((item, idx) => (
+        {data.map((item, idx) => (
           <li key={idx}>
             {item}
           </li>
@@ -18,3 +18,5 @@ export default function App() {
     </div>
   )
 }
+
+export default List
