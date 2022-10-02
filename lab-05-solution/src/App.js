@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import List from "./List"
 
 
 export default function App() {
@@ -8,13 +9,8 @@ export default function App() {
 
   return (
     <div>
-      <ul>
-        {array.map((item, idx) => (
-          <li key={idx}>
-            {item}
-          </li>
-        ))}
-      </ul>
+      <h1>Listado de elementos</h1>
+      <List items={array}/>
     </div>
   )
 }
