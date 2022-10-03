@@ -619,11 +619,6 @@ Jest and Testing React Library
   ...
 
 
-## React hooks deep dive
-   
-   
-### Hooks advanced
-
 ## React Security
 
 ### Implementing seccurity features
