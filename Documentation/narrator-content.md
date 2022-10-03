@@ -230,7 +230,7 @@ _TALK ABOUT:_
 - HelloClassComponent output should be "hello, I am a {typeComponent}" where typeComponent==="Class component"
 - HelloFunctinalComponent output should be "hello, I am a {typeComponent}" where typeComponent==="Functional component"
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-start)
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-solution)
 
 _TALK ABOUT:_
