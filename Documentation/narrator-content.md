@@ -398,6 +398,8 @@ _TO TALKABOUT:_
 - mention the way to extract directly const from the props.
 - "big three" list operations: map, filter, and reduce.
 - pass function and not the return "function()"
+   
+### Effect hook: useSate (built-in)
 
 ### Effect hook: useEffect (built-in)
 
@@ -406,7 +408,7 @@ _TO TALKABOUT:_
 - Use effects run a funtion on every render of the component (on init, on changhes)
 - useEffects first as an argument is to declare the function it will run everytime. as an optional second argument you can pass what is called dependency array - an array of ... If not declared, it will run everytime, If declared as empty it will only run on initial render other wise it will run aswell on dependency state values
 
-#### LAB07 - Demmo - Effect hook demo _\*CodeAlong_
+#### LAB07 - Demo - useState & useEffect  _\*CodeAlong_
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
