@@ -489,7 +489,7 @@ https://reactjs.org/docs/hooks-reference.html
 #### LAB12 - (movies app part 09) Link - useParams()
    
   Requirements:
--  Create details page 
+- Create details page 
 - Navigate to URL with params
    
   _TO TALK ABOUT:_
@@ -500,13 +500,38 @@ https://reactjs.org/docs/hooks-reference.html
 - Link Component
    
 ### Styling React components
-    
+   
+https://css-tricks.com/different-ways-to-write-css-in-react/
+   
+- CSS Stylesheets
+  You can create a new CSS file in your project directory and add your CSS inside it. You can then import it in your component, class or React JS page.
+   
+- Inline Styles
+   Probably the most common and quickest out of all 3 is inline CSS. However it has many disadvantages and it is generally discouraged to use unless it is a very small    application.
+   Basically, we create an object that contains different references which are then called using the style{} attribute
+   
+- Styted Components
+   Styled Components lets you write actual CSS in your JavaScript. The main advantage is that you can add conditional code and use variables and functions within the      CSS!.
+   You can install Styled Components using the following command:
+   npm install --save styled-components
+   Next, you need to import it in you component. Then you can create a new variable that will contain the CSS. The same variable name with open and close brackets will    render or create an HTML element with the previously added styles on it.
+   
+- CSS Modules
+   Can also add scoped styles quite easily, you just need to create a file with the extension .module.css
+   During the build step a new class was generated dynamically with a unique identifier.
+   CSS Modules tries to solve a problem that you might encounter when working on medium to large projects and that is global scoping in CSS.
+   
 ### LAB13 (movies app part 10) - Styling 
-   Requirements:
-- Create details page 
-- Navigate to URL with params
+   
+  Requirements:
+   
+- CSS Stylesheets for Navbar
+- Inline Styles for component FilmItem 
+- CSS Modules for component FilmDetails
+- Styted Components for component FilmList
    
   _TO TALK ABOUT:_
+   
 - CSS Stylesheets
 - Inline Styles
 - Styted Components
