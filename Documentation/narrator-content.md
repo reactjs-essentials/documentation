@@ -396,6 +396,8 @@ _TO TALKABOUT:_
 _TO TALKABOUT:_
 
 - mention the way to extract directly const from the props.
+- "big three" list operations: map, filter, and reduce.
+- pass function and not the return "function()"
 
 ### Effect hook: useEffect (built-in)
 
@@ -404,7 +406,7 @@ _TO TALKABOUT:_
 - Use effects run a funtion on every render of the component (on init, on changhes)
 - useEffects first as an argument is to declare the function it will run everytime. as an optional second argument you can pass what is called dependency array - an array of ... If not declared, it will run everytime, If declared as empty it will only run on initial render other wise it will run aswell on dependency state values
 
-#### LAB07 - Effect hook demo _\*CodeAlong_
+#### LAB07 - Demmo - Effect hook demo _\*CodeAlong_
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
@@ -420,7 +422,7 @@ _TO REMEMBER:_
 
 ### REST service API
 
-#### LAB08 - (movies app part 04) API communication _\*codeAlong_
+#### LAB09A - (movies app part 04) API communication _\*codeAlong_
 
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution)
@@ -432,7 +434,7 @@ _TO TALK ABOUT:_
 - Fetch data
 - Conditional render filmList if films are still not fetched
 
-#### LAB09 - (movies app part 05) API challange _\*HandsOn_
+#### LAB09B - (movies app part 05) API challange _\*HandsOn_
 
 Requirements:
 
@@ -456,7 +458,9 @@ You can write custom Hooks that cover a wide range of use cases like form handli
 #### LAB11 - (movies app part 07) API handling errors with custom hooks _\*codeAlong_
 
 - Handling errors
-- Create useFetch component
+- Create custom hook useFetch
+   
+   - custom hooks [link](https://reactjs.org/docs/hooks-custom.html)
 
 #### Hooks api reference
 
@@ -465,58 +469,153 @@ https://reactjs.org/docs/hooks-reference.html
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-10-solution)
 
-### Styling React components
-
-#### LAB11 - (movies app part 08) style _\*HandsOn_
-
 ### React Router ([see here](https://www.youtube.com/watch?v=aZGzwEjZrXc&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=21))
 
-#### LAB12 - (movies app part 09) Routing
+#### LAB08 - (movies app part 08) Routing 
+
+  Requirements:
+
+   
+  _TO TALK ABOUT:_
 
 - Explain old school page request, and react aproach
 - install package react-router-dom
 - Router & Switch components
 - Route match
 - Link Component
+- 
+
+
+#### LAB12 - (movies app part 09) Link - useParams()
+   
+  Requirements:
+-  Create details page 
+- Navigate to URL with params
+   
+  _TO TALK ABOUT:_
+- Explain old school page request, and react aproach
+- install package react-router-dom
+- Router & Switch components
+- Route match
+- Link Component
+   
+### Styling React components
+    
+### LAB13 (movies app part 10) - Styling 
+   Requirements:
+- Create details page 
+- Navigate to URL with params
+   
+  _TO TALK ABOUT:_
+- CSS Stylesheets
+- Inline Styles
+- Styted Components
+- CSS Modules
 
 ## Forms in react [link](https://reactjs.org/docs/forms.html)
+   
+### LAB14 (movies app part 11) - Forms 
 
-### LAB013 (movies app part 10) - Form
+Keynotes:
+
+- controlled & uncontroled forms
+- setting up the value attribute from input prevent user from changing the input. in becomes an controlled and only possible to change via callback
+- controlled is the reccomended way: instand message feedback / disable enable, format text
+
+#### Requirements
+
+- Create new film form in route "/new"
+- navigate to home page after creation
+  ...
+
+### LAB15 (movies app part 12) - Forms custom inputs
+
+- create custom select for gender
+- npm i react-select for actors
+
+### LAB16 (movies app part 13) - Using with Formik library Refactor to use Formik
+
+- Formik Basics
+
+### LAB17 (movies app part 14) - Using with Formik Field for and data validation
+
+- Field, Form, ErrorMessage
+- data-validation
+  - validate : Form level & field level
+  - schema
+    - npm install yup --save
+    -
+
+## Testing react components
+
+### LAB18 (movies app part 15) - Testing
+   
+Keynotes:
+Jest and Testing React Library
+- controlled & uncontroled forms
+- setting up the value attribute from input prevent user from changing the input. in becomes an controlled and only possible to change via callback
+- controlled is the reccomended way: instand message feedback / disable enable, format text
+
+#### Requirements
+
+- Create new film form in route "/new"
+- navigate to home page after creation
+  ...
 
 ## React Context [Link](https://reactjs.org/docs/context.html)
 
 - sharing of data between components without passing props (acts like global data)
 
-## Testing react components
+### LAB19 (movies app part 16) - Context API
+   
+Keynotes:
+Jest and Testing React Library
+- controlled & uncontroled forms
+- setting up the value attribute from input prevent user from changing the input. in becomes an controlled and only possible to change via callback
+- controlled is the reccomended way: instand message feedback / disable enable, format text
 
-### LAB14 (movies app part 11) - test
+#### Requirements
+
+- Create new film form in route "/new"
+- navigate to home page after creation
+  ...
+   
+
+### LAB20 (movies app part 16) - Redux
+   
+Keynotes:
+Jest and Testing React Library
+- controlled & uncontroled forms
+- setting up the value attribute from input prevent user from changing the input. in becomes an controlled and only possible to change via callback
+- controlled is the reccomended way: instand message feedback / disable enable, format text
+
+#### Requirements
+
+- Create new film form in route "/new"
+- navigate to home page after creation
+  ...
+
 
 ## React hooks deep dive
-
-- custom hooks [link](https://reactjs.org/docs/hooks-custom.html)
-
-### LAB15 - hooks advanced
-
-## Redux deep dive
-
-### LAB16 - redux sample
+   
+   
+### Hooks advanced
 
 ## React Security
 
-### LAB17 - implementing seccurity features
+### Implementing seccurity features
 
 ## React Best practices
 
-### folder structure example
+### Folder structure example
 
-### git flow
+### Git flow
 
 ### tools & extensions
 
 ### build run and deploy manually
 
 ### CI CD
-   
    
 ## Dev tools, debugging & performance monitoring
 
