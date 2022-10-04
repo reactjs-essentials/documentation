@@ -220,7 +220,17 @@ LAB - (movies app part 04) API communication _*codeAlong_
 - Response errors
 - Interact with state properties along response errors
 ```
-custom Hooks
+
+## custom Hooks 
+### LAB - Demo - custom Hooks _*CodeAlong_
+
+#### LAB - (movies app part 07) API handling errors _\*codeAlong_
+#### Requirements:
+```
+- custom hook useFetch
+
+```
+...
 Routing
 useParams & Link
 Styling components
