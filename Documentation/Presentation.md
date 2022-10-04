@@ -1,4 +1,3 @@
-
 # Agenda
 
     - Javascript basics
@@ -108,6 +107,7 @@ intruducing [lab-00](https://stackblitz.com/github/reactjs-essentials/training-c
 ### Hooks
 
 _simple JavaScript functions that we can use to isolate the reusable part from a functional component._
+
 - Composition vs Inheritance [link] (https://reactjs.org/docs/composition-vs-inheritance.html)
 
 - useState & events
@@ -140,18 +140,23 @@ import "./style.css";
     );
   }
 ```
+
 ### State With components & lifecycle
+
 (https://reactjs.org/docs/state-and-lifecycle.html)
 
 - componentDidMount
 - componentWillUnmount
-[example] (https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
+  [example] (https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
 
 # Starting of the main Lab app - Movies app.
+
 ## Lists
+
 ### LAB (Movies app part 01) - Lists _\*CodeAlong ()_
 
 #### Requirements:
+
 ```
 
 
@@ -166,13 +171,15 @@ import "./style.css";
 ```
 
 ## Combine multiple Components ans its reusability
-## Composing & Extracting Components
-## Destructuring props & update state
 
+## Composing & Extracting Components
+
+## Destructuring props & update state
 
 ### LAB (Movies app part 02) - components integration _\*HandsOn_ (15 min)
 
 #### Requirements:
+
 ```
 Add pass list to a component named FilmList. Pass Film content to another component named FilmItem
 ```
@@ -180,57 +187,194 @@ Add pass list to a component named FilmList. Pass Film content to another compon
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
 
-
-
-### LAB (movies app part 03) - Challange - remove item _*HandsOn_ (15 min)
+### LAB (movies app part 03) - Challange - remove item _\*HandsOn_ (15 min)
 
 #### Requirements:
+
 ```
 - add a button on each FilmItem that remove the item from the list being displayed
- 
+
 ```
- [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)|
-  [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution)
 
-## Effect hook: useEffect 
-### LAB - Demo - useState & useEffect _*CodeAlong_
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)|
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution)
 
+## Effect hook: useEffect
 
-# Server Render - REST service API
-LAB - (movies app part 04) API communication _*codeAlong_
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution)
+- The Effect Hook lets you perform side effects in function components
+  -side effects generalmente son cosas que se hacem em paralelo/ de forma assincrona e su execucion de su resultado impacta el estado do componente
+- dependency list array
+
+### LAB - Demo - useState & useEffect _\*CodeAlong_
+
+Starting point: movie-app-part-03
+Ending point: movie-app-part-04
+
+```
+import { React, useState, useEffect } from "react";
+import "./style.css";
+import FilmList from "./FilmList";
+
+const Home = () => {
+  const [films, setFilms] = useState([]);
+
+  const handleDeleteFilm = (imdbID) => {
+    const newFilms = films.filter((film) => film.imdbID !== imdbID);
+    setFilms(newFilms);
+  };
+
+  useEffect(() => {
+    fetch("https://apimocha.com/moviesapi/film")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setFilms(data);
+      });
+  }, []);
+
+  return (
+    <>
+      <h1>Film List</h1>
+      {films && <FilmList films={films} handleDeleteFilm={handleDeleteFilm} />}
+    </>
+  );
+};
+
+export default Home;
+
+```
 
 #### LAB - (movies app part 05) API challange _\*HandsOn_ (20 min)
+
 #### Requirements:
-```
+
 - loading while fetching
 - Update Delete Button to remove from API
- 
+- delete endpoint: "https://apimocha.com/moviesapi/film/" + imdbID
+- check signature of method fetch
+
 ```
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution)
+
+
+import { React, useState, useEffect } from "react";
+import "./style.css";
+import FilmList from "./FilmList";
+
+const Home = () => {
+  const [films, setFilms] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleDeleteFilm = (imdbID) => {
+    setIsLoading(true);
+    fetch("https://apimocha.com/moviesapi/film/" + imdbID, {
+      method: "DELETE",
+    }).then((res) => {
+      const newFilms = films.filter((film) => film.imdbID !== imdbID);
+      setFilms(newFilms);
+      setIsLoading(false);
+    });
+  };
+
+  useEffect(() => {
+    fetch("https://apimocha.com/moviesapi/film")
+      .then((res) => res.json())
+      .then((data) => {
+        setFilms(data);
+        setIsLoading(false);
+      });
+  }, []);
+
+  return (
+    <>
+      <h1>Films List</h1>
+      {isLoading && <p>...loading...</p>}
+      {films && <FilmList films={films} handleDeleteFilm={handleDeleteFilm} />}
+    </>
+  );
+};
+
+export default Home;
+
+
+```
+
+starting point: movie-app-part-04
+Ending point: movie-app-part-05
 
 #### LAB - (movies app part 06) API handling errors _\*codeAlong_
+
+starting point: movie-app-part-05
+Ending point: movie-app-part-06
+
 #### Requirements:
-```
+
 - Handling errors
 - Response errors
 - Interact with state properties along response errors
-```
-
-## custom Hooks 
-### LAB - Demo - custom Hooks _*CodeAlong_
-
-#### LAB - (movies app part 07) API handling errors _\*codeAlong_
-#### Requirements:
-```
-- custom hook useFetch
 
 ```
-...
+import { React, useState, useEffect } from "react";
+import "./style.css";
+import FilmList from "./FilmList";
+
+const Home = () => {
+  const [films, setFilms] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const handleDeleteFilm = (imdbID) => {
+    setIsLoading(true);
+    fetch("https://apimocha.com/moviesapi/film/" + imdbID, {
+      method: "DELETE",
+    }).then((res) => {
+      const newFilms = films.filter((film) => film.imdbID !== imdbID);
+      setFilms(newFilms);
+      setIsLoading(false);
+    });
+  };
+
+  useEffect(() => {
+    fetch("https://apimocha.com/moviesapi/film")
+      .then((res) => {
+        console.log(res);
+        if (!res.ok) {
+          throw Error(res.status);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setFilms(data);
+        setError(null);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        //Connection error
+        console.log(err.message);
+        setError(err.message);
+        setIsLoading(false);
+      });
+  }, []);
+
+  return (
+    <>
+      <h1>Films List</h1>
+      {error && <p> {error}</p>}
+      {isLoading && <p>...loading...</p>}
+      {films && <FilmList films={films} handleDeleteFilm={handleDeleteFilm} />}
+    </>
+  );
+};
+
+export default Home;
+
+```
+
+## custom Hooks
+
+LAB - Demo - custom Hooks \*CodeAlong
+starting point: movie-app-part-06
+Ending point: movie-app-part-07
+
 Routing
 useParams & Link
 Styling components
