@@ -177,18 +177,19 @@ import "./style.css";
 ## Destructuring props & update state
 
 ### LAB (Movies app part 02) - components integration _\*HandsOn_ (15 min)
-
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
 #### Requirements:
 
 ```
 Add pass list to a component named FilmList. Pass Film content to another component named FilmItem
 ```
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
+
 
 ### LAB (movies app part 03) - Challange - remove item _\*HandsOn_ (15 min)
-
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)|
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution)
 #### Requirements:
 
 ```
@@ -196,8 +197,7 @@ Add pass list to a component named FilmList. Pass Film content to another compon
 
 ```
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)|
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution)
+
 
 ## Effect hook: useEffect
 
@@ -245,7 +245,8 @@ export default Home;
 ```
 
 #### LAB - (movies app part 05) API challange _\*HandsOn_ (20 min)
-
+starting point: movie-app-part-04
+Ending point: movie-app-part-05
 #### Requirements:
 
 - loading while fetching
@@ -299,8 +300,7 @@ export default Home;
 
 ```
 
-starting point: movie-app-part-04
-Ending point: movie-app-part-05
+
 
 #### LAB - (movies app part 06) API handling errors _\*codeAlong_
 
@@ -371,10 +371,16 @@ export default Home;
 ```
 
 ## custom Hooks
-
-LAB - Demo - custom Hooks \*CodeAlong
+### useFetch
 starting point: movie-app-part-06
 Ending point: movie-app-part-07
+
+
+
+
+
+
+
 
 Routing
 useParams & Link
