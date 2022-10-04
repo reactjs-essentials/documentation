@@ -255,6 +255,7 @@ export default Home;
 
 ```
 
+Starting point: movie-app-part-04 Ending point: movie-app-part-05
 
 import { React, useState, useEffect } from "react";
 import "./style.css";
