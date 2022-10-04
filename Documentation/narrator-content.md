@@ -326,7 +326,7 @@ this.setState((state, props) => ({
 counter: state.counter + props.increment
 }));
 
-### Lifecycle [link] (https://reactjs.org/docs/state-and-lifecycle.html) _TO REMOVE???_
+### Lifecycle [link] (https://reactjs.org/docs/state-and-lifecycle.html)
 
 - componentDidMount
 - componentWillUnmount
@@ -398,8 +398,7 @@ _TO TALKABOUT:_
 - mention the way to extract directly const from the props.
 - "big three" list operations: map, filter, and reduce.
 - pass function and not the return "function()"
-   
-### Effect hook: useSate (built-in)
+  
 
 ### Effect hook: useEffect (built-in)
 
