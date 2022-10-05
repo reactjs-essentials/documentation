@@ -1,458 +1,460 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
+Forms
 
-@jmgneves
-reactjs-essentials
-/
-training-content
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-training-content/Documentation/Presentation.md
-@jmgneves
-jmgneves Update Presentation.md
-Latest commit 94b3e50 3 hours ago
-History
-2 contributors
-@jmgneves@micasno
-393 lines (290 sloc) 9.28 KB
+npm install formik@^2.2.9
+npm install yup@^0.32.11
+npm install react-select@^5.3.2
 
-# Agenda
 
-    - Javascript basics
-    - Why React
-    - First react App
-    - Class Component & Function Component
-    - hooks
-    - useState & events
-    - Lists
-    - Composing & Extracting Components
-    - Destructuring props & update state
-    - useEffect
-    - fetching Data
-    - custom Hooks
-    - Routing
-    - useParams & Link
-    - Styling components
-    - Forms
-    - Testing
-    - Context API
-    - Security and Login
-    - Redux
-    - Tools, CI CD, Best practices, Debugging
-
-# Javascript basics
-
-## Scope [Link](https://dev.to/sandy8111112004/javascript-introduction-to-scope-function-scope-block-scope-d11)
-
-## Arrow Functions [Link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) [Link](https://www.javascripttutorial.net/es6/javascript-arrow-function/)
-
-## Object Literal [Link](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
-
-## Destructuring [Link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-
-## Rest/Spread operators syntax [Link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-
-```
-function sumAll(...args) { // args es el nombre del array
-...
-}
-sumAll(1,2,3)
-```
-
-```
-function sum(x, y, z) {
-    return x + y + z;
-}
-sum(...numbers)
-```
-
-## Promises and async await [Link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-
-## Why React
-
-- Flexibility
-- Developer Experience
-- Corporate Investment
-- Community
-- Testability
-- Framework vs. Library
-- Template-centric vs. JavaScript-centric
-- Separate vs. Single File
-
-## First react App
-
-_Goal of this section, get familiar with dev environment, hands on first app developments, basic react concepts_
-
-### First react app
-
-```
-  npm init -y
-  npm install react react-dom next
-  // add hello world component
-```
-
-### App from create react app
-
-```
-  npx create-react-app my-app
-  cd my-app
-  npm start
-  // add hello world component
-```
-
-### Intruducing [lab-00](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
-
-### React basic concepts & conventions
-
-## Class Component & Function Component
-
-### LAB (15 min)
-
-#### Requirements:
-
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-start) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-solution)
-
-```
-- 2 components named: [HelloClassComponent,HelloFunctionalComponent]
-- HelloClassComponent output should be "hello, I am a {typeComponent}" where typeComponent==="Class component"
-- HelloFunctinalComponent output should be "hello, I am a {typeComponent}" where typeComponent==="Functional component"
-- Render both components in App Component
-```
-
-### Hooks
-
-_simple JavaScript functions that we can use to isolate the reusable part from a functional component._
-
-- Composition vs Inheritance [link] (https://reactjs.org/docs/composition-vs-inheritance.html)
-- useState
-- start example from [lab-00](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
-
-```
-import React from "react";
-import "./style.css";
-  // Function component with state hook
-  // start with normal const to demonstrate non reactive variables, then evolve to bellow solution
-  import React, { useState } from 'react';
-  export default function App() {
-    // Declare a new state variable, which we'll call "count"
-    const [name, setName] = useState("Joao Neves");
-    const [age, setAge] = useState(38);
-    return (
-      <div>
-        <p>{name}({age})</p>
-        <button onClick={() => {
-          setName("Juan Nieves");
-          setAge(65);
-        }}>
-          Swap from PT and ES
-        </button>
-      </div>
-    );
-  }
-```
-
-### State With components & lifecycle ([Link](https://reactjs.org/docs/state-and-lifecycle.html))
-
-- componentDidMount
-- componentWillUnmount
-- [Example](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
-
-# Starting of the main Lab app - Movies app.
-
-## Lists
-
-### LAB (Movies app part 01) - Lists _\*CodeAlong ()_
-
-// TODO: Paste starting point and ending point here
-
-#### Requirements:
-
-```
-- Add a component that list a collection of movies
-- Movies object:
-  - id
-  - title
-  - year
-  - genre
-  - director
-  - actors
-```
-
-## Combine multiple Components ans its reusability
-
-## Composing & Extracting Components
-
-## Destructuring props & update state
-
-### LAB (Movies app part 02) - components integration _\*HandsOn_ (15 min)
-
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
-
-#### Requirements:
-
-```
-Add pass list to a component named FilmList. Pass Film content to another component named FilmItem
-```
-
-### LAB (movies app part 03) - Challange - remove item _\*HandsOn_ (15 min)
-
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)|
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution)
-
-#### Requirements:
-
-```
-- add a button on each FilmItem that remove the item from the list being displayed
-```
-
-## Effect hook: useEffect
-
-- The Effect Hook lets you perform side effects in function components
-  - side effects generalmente son cosas que se hacem em paralelo/ de forma assincrona e su execucion de su resultado impacta el estado do componente
-- dependency list array
-
-### LAB - Demo - useState & useEffect _\*CodeAlong_
-
-- _Starting point: movie-app-part-03_
-- _Ending point: movie-app-part-04_
-
-```
-import { React, useState, useEffect } from "react";
-import "./style.css";
-import FilmList from "./FilmList";
-const Home = () => {
-  const [films, setFilms] = useState([]);
-  const handleDeleteFilm = (imdbID) => {
-    const newFilms = films.filter((film) => film.imdbID !== imdbID);
-    setFilms(newFilms);
-  };
-  useEffect(() => {
-    fetch("https://apimocha.com/moviesapi/film")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setFilms(data);
-      });
-  }, []);
-  return (
-    <>
-      <h1>Film List</h1>
-      {films && <FilmList films={films} handleDeleteFilm={handleDeleteFilm} />}
-    </>
-  );
-};
-export default Home;
-```
-
-#### LAB - (movies app part 05) API challange - delete and loading features _\*HandsOn_ (20 min)
-
-- _starting point: movie-app-part-04_
-- _Ending point: movie-app-part-05_
-
-#### Requirements:
-
-- loading while fetching
-- Update Delete Button to remove from API
-- Implement Delete callind Delete endpoint
-  - delete endpoint: "https://apimocha.com/moviesapi/film/" + imdbID
-  - Hint: check signature of method fetch
-
-```
-
-import { React, useState, useEffect } from "react";
-import "./style.css";
-import FilmList from "./FilmList";
-
-const Home = () => {
-const [films, setFilms] = useState([]);
-const [isLoading, setIsLoading] = useState(true);
-
-const handleDeleteFilm = (imdbID) => {
-  setIsLoading(true);
-  fetch("https://apimocha.com/moviesapi/film/" + imdbID, {
-    method: "DELETE",
-  })
-  .then((res) => {
-    const newFilms = films.filter((film) => film.imdbID !== imdbID);
-    setFilms(newFilms);
-    setIsLoading(false);
-  });
-};
-useEffect(() => {
-  fetch("https://apimocha.com/moviesapi/film")
-  .then((res) => res.json())
-  .then((data) => {
-    setFilms(data);
-    setIsLoading(false);
-  });
-}, []);
-return (
-  <>
-    <h1>Films List</h1>
-    {isLoading && <p>...loading...</p>}
-    {films && <FilmList films={films} handleDeleteFilm={handleDeleteFilm} />}
-  </>
-);
-};
-export default Home;
-```
-
-#### LAB - (movies app part 06) API handling errors _\*codeAlong_
-
-\_\_
-
-- _Starting point: movie-app-part-05_
-- _Ending point: movie-app-part-06_
-
-#### Requirements:
-
-- Handling errors
-- Response errors
-- Interact with state properties along response errors
-
-```
-import { React, useState, useEffect } from "react";
-import "./style.css";
-import FilmList from "./FilmList";
-
-const Home = () => {
-const [films, setFilms] = useState([]);
-const [isLoading, setIsLoading] = useState(true);
-const [error, setError] = useState(null);
-
-const handleDeleteFilm = (imdbID) => {
-  setIsLoading(true);
-  fetch("https://apimocha.com/moviesapi/film/" + imdbID, {
-    method: "DELETE",
-  })
-  .then((res) => {
-    const newFilms = films.filter((film) => film.imdbID !== imdbID);
-    setFilms(newFilms);
-    setIsLoading(false);
-  });
-};
-useEffect(() => {
-  fetch("https://apimocha.com/moviesapi/film")
-  .then((res) => {
-    console.log(res);
-    if (!res.ok) {
-    throw Error(res.status);
-  }
-    return res.json();
-  })
-  .then((data) => {
-    setFilms(data);
-    setError(null);
-    setIsLoading(false);
-  })
-  .catch((err) => {
-    //Connection error
-    console.log(err.message);
-    setError(err.message);
-    setIsLoading(false);
-  });
-}, []);
-return (
-  <>
-    <h1>Films List</h1>
-    {error && <p> {error}</p>}
-    {isLoading && <p>...loading...</p>}
-    {films && <FilmList films={films} handleDeleteFilm={handleDeleteFilm} />}
-  </>
-);
-};
-export default Home;
-
-```
-
-## custom Hooks
-
-### useFetch
-
-_Starting point: movie-app-part-06_
-_Ending point: movie-app-part-07_
-
-## Routing useParams & Link
-## Styling components
-
-## Forms in react [link](https://reactjs.org/docs/forms.html)
-
-### LAB First Form _\*codeAlong_
+### LAB First Fprm _\*codeAlong_
 
 _Starting point: movie-app-part-09_
 _Ending point: movie-app-part-11_
 
-- controlled & uncontroled forms
-  - HTML form elements work a bit differently from other DOM elements in React, because form elements naturally keep some internal state. For example, this form in plain HTML accepts a single name:
-  - Controlled compenents rely on usestate to control state for each input elements
-  - uncontrolled components rely on DOM state to manage the values
-  - controlled is the reccomended way: instand message feedback / disable enable, format text
-- setting up the value attribute from input prevent user from changing the input. in becomes an controlled and only possible to change via callback
-- controlled is the reccomended way: instand message feedback / disable enable, format text
+```
+===================   App           ===================
+...
+  <Route path="/new" element={<NewFilmForm />}></Route>
+...
 
-#### Requirements
+===================   style.css     ===================
+h1,
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
 
-- Create new film form in route "/new"
-- navigate to home page after creation
-- Film object to Post = {
-  imdbID: "",
-  title: "",
-  year: "",
-  gender: "",
-  director: "",
-  actors: "",
-  }
+.new-film-form {
+  max-width: 500px;
+}
+.new-film-form label {
+  display: block;
+  margin-top: 10px;
+}
+.new-film-form h2 {
+  color: #ff5800;
+}
+.new-film-form input,
+.new-film-form textarea,
+.new-film-form select {
+  width: 400px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  display: block;
+}
+.new-film-form button {
+  background: #ff5800;
+  margin-top: 10px;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
 
-### LAB Forms custom inputs
+.new-film-form select {
+  width: 422px;
+}
+
+===================   NewFilmForm   ===================
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const NewFilmForm = () => {
+  const [newFilm, setNewFilm] = useState({
+    imdbID: "",
+    title: "",
+    year: "",
+    gender: "",
+    director: "",
+    actors: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("https://apimocha.com/moviesapi/film/" + newFilm.imdbID, {
+      method: "POST",
+      body: JSON.stringify(newFilm),
+    }).then(() => navigate("/"));
+  };
+  const navigate = useNavigate();
+
+  return (
+    <div className="new-film-form">
+      <h2>Add new film</h2>
+      <form onSubmit={handleSubmit}>
+        <label>imdbID</label>
+        <input
+          type="text"
+          required
+          value={newFilm?.imdbID}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              imdbID: e.target.value,
+            });
+          }}
+        ></input>
+        <label>Title</label>
+        <input
+          type="text"
+          required
+          value={newFilm?.title}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              title: e.target.value,
+            });
+          }}
+        ></input>
+        <label>Year</label>
+        <input
+          type="number"
+          required
+          value={newFilm?.year}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              year: e.target.value,
+            });
+          }}
+        ></input>
+        <label>Gender</label>
+        <select
+          value={newFilm?.gender}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              gender: e.target.value,
+            });
+          }}
+        >
+          <option value="Action">Action</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Drama">Drama</option>
+          <option value="Horror">Horror</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Biography">Biography</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Crime">Crime</option>
+        </select>
+
+        <label>Director</label>
+        <input
+          type="text"
+          required
+          value={newFilm?.director}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              director: e.target.value,
+            });
+          }}
+        ></input>
+        <label>Actors</label>
+        <input
+          type="text"
+          required
+          value={newFilm?.actors}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              actors: e.target.value,
+            });
+          }}
+        ></input>
+        <button type="submit">Add Film</button>
+      </form>
+    </div>
+  );
+};
+
+export default NewFilmForm;
+
+
+```
+
+### LAB Custom Inputs _\*codeAlong_
 
 _Starting point: movie-app-part-11_
 _Ending point: movie-app-part-12_
 
 - create custom select for gender
-  - fetch All genders using useFetch
-  - Turn gender and actors array values
-  - All genders endpoint url= "https://apimocha.com/moviesapi/gender"
+  - imports
+
+```
+  import { useState, useEffect } from "react";
+  import { useNavigate } from "react-router-dom";
+  import useFetch from "./useFetch";
+  import Select from "./Select";
+
+
+```
+
+- Turn gender and actors array values
+
+```
+  const [newFilm, setNewFilm] = useState({
+    imdbID: "",
+    title: "",
+    year: "",
+    gender: [],
+    director: "",
+    actors: [],
+  });
+```
+
+- fetch All genders using useFetch
+- All genders endpoint url= "https://apimocha.com/moviesapi/gender"
+
+```
+  const {
+    error,
+    isLoading,
+    data: allGenders,
+  } = useFetch("https://apimocha.com/moviesapi/gender");
+
+
+```
+
+-CREATE NEW COMPENENT named Select
+
+```
+const Select = ({ collection, value, isMultiple, handleOnChange }) => {
+  return (
+    <>
+      <select
+        multiple={isMultiple}
+        value={value}
+        onChange={(e) => {
+          handleOnChange([...e.target.selectedOptions].map((o) => o.value));
+        }}
+      >
+        {collection.map((gender) => (
+          <option key={gender} value={gender}>
+            {gender}
+          </option>
+        ))}
+      </select>
+    </>
+  );
+};
+
+export default Select;
+```
+
+- swap genders html
+
+```
+        {allGenders && (
+          <Select
+            collection={allGenders}
+            isMultiple={true}
+            handleOnChange={handleGenderOnChange}
+            value={newFilm?.gender}
+          ></Select>
+        )}
+```
+
+- handleGenderOnChange
+
+```
+ const handleGenderOnChange = (selectedOptions) => {
+    setNewFilm({
+      ...newFilm,
+      gender: selectedOptions,
+    });
+  };
+```
+
 - create a input for actors based on react-select library
   - npm i react-select for actors
+  - imports
 
-### LAB: Using with Formik library Refactor to use Formik [link](https://formik.org/docs/overview)
+```
+  import CreatableSelect from "react-select/creatable";
+```
 
-_Starting point: movie-app-part-12_
-_Ending point: movie-app-part-13_
+- prop to grab selected
 
-- Formik Basics
-  - initial Values
-  - on submit, (values, actions)
-  - render form through render function (function that return some JSX) {(props)=>(<>render fn</>)}
+```
+  const selectedActors = [];
+```
 
-### LAB: Using with Formik Field for and data validation
+- handle handleActorsOnChange
 
-- Field, Form, ErrorMessage
-- data-validation
-  - validate : Form level & field level
-  - schema
-    - npm install yup --save
-## Testing
-## Context API
-## Security
-## Redux
-## Tools, CI CD, Best practices, Debugging
+```const handleActorsOnChange = (values) => {
+    const actors = values.map((item) => item.value);
+    setNewFilm({
+      ...newFilm,
+      actors: actors,
+    });
+  };
+```
 
+- swap html for actors input
+
+```
+        <CreatableSelect
+          className="label-input"
+          isMulti
+          onChange={handleActorsOnChange}
+          options={selectedActors}
+        />
+```
+
+## FULL NewFilmForm code
+
+```import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import useFetch from "./useFetch";
+import Select from "./Select";
+
+import CreatableSelect from "react-select/creatable";
+
+const NewFilmForm = () => {
+  const [newFilm, setNewFilm] = useState({
+    imdbID: "",
+    title: "",
+    year: "",
+    gender: [],
+    director: "",
+    actors: [],
+  });
+
+  // const [allGenders, setAllGenders] = useState(null);
+  const {
+    error,
+    isLoading,
+    data: allGenders,
+  } = useFetch("https://apimocha.com/moviesapi/gender");
+
+  const selectedActors = [];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("https://apimocha.com/moviesapi/film/" + newFilm.imdbID, {
+      method: "POST",
+      body: JSON.stringify(newFilm),
+    }).then(() => navigate("/"));
+  };
+
+  const handleGenderOnChange = (selectedOptions) => {
+    setNewFilm({
+      ...newFilm,
+      gender: selectedOptions,
+    });
+  };
+
+  const handleActorsOnChange = (values) => {
+    const actors = values.map((item) => item.value);
+    setNewFilm({
+      ...newFilm,
+      actors: actors,
+    });
+  };
+  const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   fetch("https://apimocha.com/moviesapi/gender")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setAllGenders([...data]);
+  //     });
+  // }, []);
+
+  return (
+    <div className="new-film-form">
+      <h2>Add new film</h2>
+      <form onSubmit={handleSubmit}>
+        <label>imdbID</label>
+        <input
+          type="text"
+          required
+          value={newFilm?.imdbID}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              imdbID: e.target.value,
+            });
+          }}
+        ></input>
+        <label>Title</label>
+        <input
+          type="text"
+          required
+          value={newFilm?.title}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              title: e.target.value,
+            });
+          }}
+        ></input>
+        <label>Year</label>
+        <input
+          type="number"
+          required
+          value={newFilm?.year}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              year: e.target.value,
+            });
+          }}
+        ></input>
+        <label>Gender</label>
+        {allGenders && (
+          <Select
+            collection={allGenders}
+            isMultiple={true}
+            handleOnChange={handleGenderOnChange}
+            value={newFilm?.gender}
+          ></Select>
+        )}
+        <label>Director</label>
+        <input
+          type="text"
+          required
+          value={newFilm?.director}
+          onChange={(e) => {
+            console.log("1", newFilm);
+            setNewFilm({
+              ...newFilm,
+              director: e.target.value,
+            });
+          }}
+        ></input>
+        <label>Actors</label>
+        <CreatableSelect
+          className="label-input"
+          isMulti
+          onChange={handleActorsOnChange}
+          options={selectedActors}
+        />
+        <button type="submit">Add Film</button>
+      </form>
+    </div>
+  );
+};
+
+export default NewFilmForm;
 
 ```
 
-```
+## LAB: Using with Formik Field for and data validation
+
+Formik es una libraria que permite mantener e trackear os values do nosso form de forma "automatica sin ser nosotros a gerir este processo de gerir os form fields"
+
+## YUP
+
+https://www.youtube.com/watch?v=ftLy78R8xrg
