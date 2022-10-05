@@ -388,7 +388,64 @@ _Ending point: movie-app-part-07_
 
 ## Routing useParams & Link
 ## Styling components
-## Forms
+
+## Forms in react [link](https://reactjs.org/docs/forms.html)
+
+### LAB First Form _\*codeAlong_
+
+_Starting point: movie-app-part-09_
+_Ending point: movie-app-part-11_
+
+- controlled & uncontroled forms
+  - HTML form elements work a bit differently from other DOM elements in React, because form elements naturally keep some internal state. For example, this form in plain HTML accepts a single name:
+  - Controlled compenents rely on usestate to control state for each input elements
+  - uncontrolled components rely on DOM state to manage the values
+  - controlled is the reccomended way: instand message feedback / disable enable, format text
+- setting up the value attribute from input prevent user from changing the input. in becomes an controlled and only possible to change via callback
+- controlled is the reccomended way: instand message feedback / disable enable, format text
+
+#### Requirements
+
+- Create new film form in route "/new"
+- navigate to home page after creation
+- Film object to Post = {
+  imdbID: "",
+  title: "",
+  year: "",
+  gender: "",
+  director: "",
+  actors: "",
+  }
+
+### LAB Forms custom inputs
+
+_Starting point: movie-app-part-11_
+_Ending point: movie-app-part-12_
+
+- create custom select for gender
+  - fetch All genders using useFetch
+  - Turn gender and actors array values
+  - All genders endpoint url= "https://apimocha.com/moviesapi/gender"
+- create a input for actors based on react-select library
+  - npm i react-select for actors
+
+### LAB: Using with Formik library Refactor to use Formik [link](https://formik.org/docs/overview)
+
+_Starting point: movie-app-part-12_
+_Ending point: movie-app-part-13_
+
+- Formik Basics
+  - initial Values
+  - on submit, (values, actions)
+  - render form through render function (function that return some JSX) {(props)=>(<>render fn</>)}
+
+### LAB: Using with Formik Field for and data validation
+
+- Field, Form, ErrorMessage
+- data-validation
+  - validate : Form level & field level
+  - schema
+    - npm install yup --save
 ## Testing
 ## Context API
 ## Security
