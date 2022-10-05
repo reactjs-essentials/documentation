@@ -11,10 +11,13 @@ export default function Detail() {
 
     const { id } = useParams()
     const {info, setInfo} = useContext(SharedContext)
-    console.log(info)
+
+    
     
     const state = useSelector(state => state)
     const dispatch = useDispatch()
+    
+    console.log("Redux state :" + state)
 
   return (
     <div style={{margin :'20px'}}>
