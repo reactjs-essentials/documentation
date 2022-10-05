@@ -1,5 +1,3 @@
-
-
 # Agenda
 
     - Javascript basics
@@ -402,6 +400,7 @@ _Ending point: movie-app-part-11_
 - Create new film form in route "/new"
 - submit form and navigate to home page after creation
   - const handleSubmit = (e) => {}
+  - POST fetch: https://apimocha.com/moviesapi/film/:imdbID with body
   
 - Film object to Post = {
   imdbID: "",
