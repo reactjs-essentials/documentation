@@ -1,0 +1,12 @@
+const counterReducer = (state = 0, action) => {
+    if (action.type === 'INCREMENT') {
+      return state + 1;
+    } else if (action.type === 'DECREMENT') {
+      return state  - 1;
+    }
+
+    console.log("Redux state :" + state)
+    return state ;
+  };
+
+  export default counterReducer;
