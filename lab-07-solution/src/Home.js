@@ -103,12 +103,12 @@ const Home = () => {
     console.log("useEffect executed");
     console.log("Total films in list " + films.length)
     console.log("Counter " + counter)
-  },[films]);
+  },[]);
 
   return (
     <>
       <h1>Films List with Components</h1>
-      
+
       <section>
         <h4>Counter : {counter}</h4>
         <button onClick={() => setCounter(counter + 1)}> + </button>
