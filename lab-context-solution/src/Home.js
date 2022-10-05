@@ -11,7 +11,7 @@ export default function Home() {
   let id = 5;
 
   const {info, setInfo} = useContext(SharedContext)
-
+  console.log(info)
   return (
     <div>
       <h1>Listado de home</h1>
@@ -19,7 +19,7 @@ export default function Home() {
         <Link to={`/details/${id}`}>Ir al detalle</Link>
       </button>
       Info from Context : {info}
-      <button onClick ={() => setInfo('changed info')}>
+      <button onClick ={() => setInfo('set info')}>
         Update Context
       </button>
     </div>

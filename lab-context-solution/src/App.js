@@ -17,9 +17,9 @@ export default function App() {
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={    <SharedContextProvider><About />    </SharedContextProvider>}></Route>
-        <Route path="/details/:id" element={<Detail />}></Route>
+        <Route path="/" element={<SharedContextProvider><Home /></SharedContextProvider>}></Route>
+        <Route path="/about" element={ <About /> }></Route>
+        <Route path="/details/:id" element={<SharedContextProvider><Detail /></SharedContextProvider>}></Route>
       </Routes>
     </BrowserRouter>
   )
