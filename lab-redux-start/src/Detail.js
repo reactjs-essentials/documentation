@@ -15,13 +15,15 @@ export default function Detail() {
     
 
   return (
-    <div>
+    <div style={{margin :'20px'}}>
       <h1>Listado de detail numero {id}</h1>
-
-          <button onClick ={() => setInfo('set detail')}>
+      <section style={{margin :'20px'}}>
+        <button style={{margin :'20px'}} onClick ={() => setInfo('set detail')}>
           Update Context
         </button>
+        <br/>
         Info from Context : {info}
+        </section>
       </div>
   )
 }

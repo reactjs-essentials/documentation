@@ -12,22 +12,24 @@ export default function Home() {
 
   const {info, setInfo} = useContext(SharedContext)
 
-  const data = useContext(FirstContext);
-
-  console.log(data)
   console.log(info)
   
   return (
-    <div>
+    <>
+    <div style={{margin :'20px'}}>
       <h1>Listado de home</h1>
+      <br/>
+      Info from Context : {info}
+      <br/>
+      <button style={{margin :'20px'}} onClick ={() => setInfo('set info')}>
+        Update Context
+      </button>
+      </div>
+      <div>
       <button>
         <Link to={`/details/${id}`}>Ir al detalle</Link>
       </button>
-      Info from Context : {info}{data}
-
-      <button onClick ={() => setInfo('set info')}>
-        Update Context
-      </button>
     </div>
+    </>
   )
 }

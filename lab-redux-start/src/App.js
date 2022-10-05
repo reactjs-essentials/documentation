@@ -18,7 +18,7 @@ export default function App() {
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<SharedContextProvider><FirstContext.Provider value={'Shared Data'}><Home /></FirstContext.Provider></SharedContextProvider>}></Route>
+        <Route path="/" element={<SharedContextProvider><Home /></SharedContextProvider>}></Route>
         <Route path="/about" element={ <About /> }></Route>
         <Route path="/details/:id" element={<SharedContextProvider><Detail /></SharedContextProvider>}></Route>
       </Routes>
