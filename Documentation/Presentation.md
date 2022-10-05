@@ -1,32 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
 
-@jmgneves
-reactjs-essentials
-/
-training-content
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-training-content/Documentation/Presentation.md
-@jmgneves
-jmgneves Update Presentation.md
-Latest commit 94b3e50 3 hours ago
-History
-2 contributors
-@jmgneves@micasno
-393 lines (290 sloc) 9.28 KB
 
 # Agenda
 
