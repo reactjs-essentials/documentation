@@ -216,7 +216,7 @@ _TO TALKABOUT:_
 
 ## Server Render - REST service API [link](https://apimocha.com)
 
-### Available mocked endmoints:
+### Available mocked endpoints:
 
 - GET - https://apimocha.com/moviesapi/film/
 - GET - https://apimocha.com/moviesapi/film/:imdbID
@@ -321,7 +321,7 @@ _Ending point: movie-app-part-12_
 ```
 - create custom select for gender
   - fetch All genders using useFetch
-  - Turn gender and actors array values
+  - Turn gender and actors array values for multi select
   - All genders endpoint url= "https://apimocha.com/moviesapi/gender"
 - create a input for actors based on react-select library
   - npm i react-select for actors
