@@ -418,12 +418,56 @@ _Ending point: movie-app-part-14_
   - schema
     - npm install yup --save
 
-## Testing
+## Testing (https://reactjs.org/docs/testing.html)
 
-//TODO:Miguel
+Recommended Tools: Jest & React Testing Library
+    
+- **Jest** is a JavaScript test runner that lets you access the DOM via jsdom. While jsdom is only an approximation of how the browser works, it is often good enough for testing React components. Jest provides a great iteration speed combined with powerful features like mocking modules and timers so you can have more control over how the code executes.
 
-## Context API
-//TODO:Miguel
+- **React Testing Library** is a set of helpers that let you test React components without relying on their implementation details. This approach makes refactoring a breeze and also nudges you towards best practices for accessibility. Although it doesn’t provide a way to “shallowly” render a component without its children, a test runner like Jest lets you do this by mocking.
+    
+### LAB: Testing (Movies app part 15) 
+    
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-14-solution) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-15-solution)
+    
+_Starting point: movie-app-part-14_
+_Ending point: movie-app-part-15_
+    
+   Requirements:
+    
+- App.test.js
+       1. Check component rendering after navigation to form (using click and timeout). Using getByText method.
+- FilmItem.test.js
+       2. Check component rendering using mock for props. Using getByText method.
+- Navbar.test.js : 
+       3. Testing using getByRole from React Testing Library
+
+
+## Context API (https://reactjs.org/docs/context.html)
+
+Recommended Tools: Jest & React Testing Library
+    
+- **Jest** is a JavaScript test runner that lets you access the DOM via jsdom. While jsdom is only an approximation of how the browser works, it is often good enough for testing React components. Jest provides a great iteration speed combined with powerful features like mocking modules and timers so you can have more control over how the code executes.
+
+- **React Testing Library** is a set of helpers that let you test React components without relying on their implementation details. This approach makes refactoring a breeze and also nudges you towards best practices for accessibility. Although it doesn’t provide a way to “shallowly” render a component without its children, a test runner like Jest lets you do this by mocking.
+    
+### LAB: Testing (Movies app part 15) 
+    
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-14-solution) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-15-solution)
+    
+_Starting point: movie-app-part-14_
+_Ending point: movie-app-part-15_
+    
+   Requirements:
+    
+- App.test.js
+       1. Check component rendering after navigation to form (using click and timeout). Using getByText method.
+- FilmItem.test.js
+       2. Check component rendering using mock for props. Using getByText method.
+- Navbar.test.js : 
+       3. Testing using getByRole from React Testing Library
     
 ## Security
 
