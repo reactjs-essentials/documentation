@@ -505,9 +505,57 @@ Key Usecases:
 - Delete Film post should be called with a Bearer Token provided by logged in data
 ```
 
-## Redux
+## [Redux]([https://reactjs.org/docs/context.html](https://react-redux.js.org/introduction/getting-started)
 
-//TODO:Miguel
+To use React Redux with your React app, install it as a dependency:
+    *If you use npm:*
+- npm install react-redux
+
+
+## What is Redux?
+    
+Redux is a package that creates a global state which you can share between React components—no parent / child relationship required.
+Main parts :
+- Stores
+- Reducers
+- Actions
+ 
+### 1. Redux Store
+    
+- Redux places all of your components' state in one central location. This makes it accessible to all components without requiring a parent / child relationship. The central location in which we store the state is called a store.
+    
+- **This API includes the following:**
+
+- getState for accessing the current state of the application
+- dispatch for changing state via an action
+- subscribe for responding to state changes
+    
+### 2. Redux Reducers
+    
+A reducer is just a function that takes two arguments and returns your app's current state. The two arguments it takes are:
+
+- Your current state (JavaScript object)
+- An action (also a JavaScript object)
+    
+### 3. Redux Actions
+    
+Redux actions are JavaScript objects that contain two properties: type and payload. These actions are "dispatched," or used as arguments by the Redux store's dispatch API method.
+    
+### LAB: Redux (Movies app part 17) 
+    
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-16-solution) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-17-solution)
+    
+_Starting point: movie-app-part-16_
+_Ending point: movie-app-part-17_
+
+Create a new screen where we are going to have a watchlist that shows the selected movies on the home page
+
+Requirements:
+    
+- Create new file WatchList.js (displays movies from Redux state)
+- Add button WatchList in FilmList component that uses dispatch function from Redux.
+- Create watchlistReducer with 2 actions : DELETE_FILM and ADD_FILM
 
 ## Tools
 
