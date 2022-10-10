@@ -139,16 +139,18 @@ import "./style.css";
   }
 ```
 
-### State With components & lifecycle
+### State With components & lifecycle [link](https://reactjs.org/docs/state-and-lifecycle.html)
 
-[link](https://reactjs.org/docs/state-and-lifecycle.html)
-[example] (https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
+- [example](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
 
 # Starting of the main Lab app - Movies app.
 
 ## Lists, Destructuring props, Composing & Extracting Components
 
 ### LAB (Movies app part 01) - Lists _\*CodeAlong ()_
+
+_Starting point: movie-app-part-01_
+_Ending point: movie-app-part-02_
 
 #### Requirements:
 
@@ -169,6 +171,9 @@ _TO TALK ABOUT:_
 
 ### LAB (Movies app part 02) - components integration _\*HandsOn_ (15 min)
 
+_Starting point: movie-app-part-01_
+_Ending point: movie-app-part-02_
+
 #### Requirements:
 
 ```
@@ -188,6 +193,9 @@ _TO TALKABOUT:_
 
 ### LAB (movies app part 03) - Challange - remove item _\*HandsOn_ (15 min)
 
+_Starting point: movie-app-part-02_
+_Ending point: movie-app-part-03_
+
 #### Requirements:
 
 ```
@@ -201,9 +209,6 @@ _TO TALKABOUT:_
 ## Effect hook: useEffect [link](https://reactjs.org/docs/hooks-effect.html)
 
 ### LAB - Demo - useState & useEffect _\*CodeAlong_
-
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-03-solution)
 
 _TO TALKABOUT:_
 
