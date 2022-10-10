@@ -284,7 +284,33 @@ Custom Hooks are more of a convention than a feature. If a function’s name sta
 
 ## Routing, useParams, useNavigate & Link
 
-//TODO:Miguel
+*React Router* is a standard library for routing in React.
+
+[React-Router](https://reactrouter.com/en/main)
+
+TO TALK ABOUT:
+
+- install package react-router-dom
+- Router & Switch components
+- Route match
+- Link Component
+
+Related hooks:
+
+- useParams()
+
+The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
+
+- useNavigate()
+    
+The useNavigate hook returns a function that lets you navigate programmatically, for example in an effect.
+
+
+### LAB (Movies app part 07 to Movies app part 09) - Routing + useParams _\*CodeAlong_
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-07-solution) |
+[Middle point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution)
 
 ## Styling components
 
