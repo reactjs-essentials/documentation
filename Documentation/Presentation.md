@@ -524,7 +524,7 @@ Main parts :
     
 - Redux places all of your components' state in one central location. This makes it accessible to all components without requiring a parent / child relationship. The central location in which we store the state is called a store.
     
-- **This API includes the following:**
+**This API includes the following:**
 
 - getState for accessing the current state of the application
 - dispatch for changing state via an action
