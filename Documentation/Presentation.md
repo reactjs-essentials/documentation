@@ -86,7 +86,7 @@ intruducing [lab-00](https://stackblitz.com/github/reactjs-essentials/training-c
   // add hello world component
 ```
 
-## Class Component & Function Component
+### Class Component & Function Component
 
 ### LAB (15 min)
 
