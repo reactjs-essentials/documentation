@@ -319,7 +319,7 @@ The useNavigate hook returns a function that lets you navigate programmatically,
 - Create details page
 - Navigate to URL with params
 
-## Styling components [link]https://css-tricks.com/different-ways-to-write-css-in-react/
+## [Styling components](https://css-tricks.com/different-ways-to-write-css-in-react/)
    
 ### CSS Stylesheets
 - You can create a new CSS file in your project directory and add your CSS inside it. You can then import it in your component, class or React JS page.
@@ -348,7 +348,7 @@ The useNavigate hook returns a function that lets you navigate programmatically,
 - Add FilmDetails.module.css -> CSS Modules
 - Use Styled Components in FilmList.js
 
-## Forms in react [link](https://reactjs.org/docs/forms.html)
+## [Forms in react](https://reactjs.org/docs/forms.html)
 
 ### LAB - First Form _\*codeAlong_
 
@@ -434,7 +434,7 @@ Recommended Tools: Jest & React Testing Library
 _Starting point: movie-app-part-14_
 _Ending point: movie-app-part-15_
     
-   Requirements:
+Requirements:
     
 - App.test.js
        1. Check component rendering after navigation to form (using click and timeout). Using getByText method.
@@ -444,30 +444,38 @@ _Ending point: movie-app-part-15_
        3. Testing using getByRole from React Testing Library
 
 
-## Context API (https://reactjs.org/docs/context.html)
+## [Context API](https://reactjs.org/docs/context.html)
 
-Recommended Tools: Jest & React Testing Library
+# What is React context?
+- React context allows us to pass down and use (consume) data in whatever component we need in our React app without using props.
     
-- **Jest** is a JavaScript test runner that lets you access the DOM via jsdom. While jsdom is only an approximation of how the browser works, it is often good enough for testing React components. Jest provides a great iteration speed combined with powerful features like mocking modules and timers so you can have more control over how the code executes.
+# When should you use React context?
+- React context is great when you are passing data that can be used in any component in your application.
 
-- **React Testing Library** is a set of helpers that let you test React components without relying on their implementation details. This approach makes refactoring a breeze and also nudges you towards best practices for accessibility. Although it doesn’t provide a way to “shallowly” render a component without its children, a test runner like Jest lets you do this by mocking.
+# These types of data include:
+
+- Theme data (like dark or light mode)
+- User data (the currently authenticated user)
+- Location-specific data (like user language or locale)
     
-### LAB: Testing (Movies app part 15) 
+- Data should be placed on React context that does not need to be updated often.
+Why? Because context was not made as an entire state management system. It was made to make consuming data easier.
     
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-14-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-15-solution)
+# What problems does React context solve?
+*React context helps us avoid the problem of props drilling.*
+- Props drilling is a term to describe when you pass props down multiple levels to a nested component, through components that don't need it.
     
-_Starting point: movie-app-part-14_
-_Ending point: movie-app-part-15_
+### LAB: Context API (Movies app part 16) 
     
-   Requirements:
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-15-solution) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-16-solution)
     
-- App.test.js
-       1. Check component rendering after navigation to form (using click and timeout). Using getByText method.
-- FilmItem.test.js
-       2. Check component rendering using mock for props. Using getByText method.
-- Navbar.test.js : 
-       3. Testing using getByRole from React Testing Library
+_Starting point: movie-app-part-15_
+_Ending point: movie-app-part-16_
+    
+Requirements:
+    
+- Create ThemeContext : dark - light (updated in Navbar.js)
     
 ## Security
 
