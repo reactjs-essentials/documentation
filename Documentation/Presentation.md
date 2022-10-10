@@ -146,7 +146,7 @@ import "./style.css";
 
 ## Lists, Destructuring props, Composing & Extracting Components
 
-### LAB (Movies app part 01) - Lists _\*CodeAlong ()_
+### LAB (Movies app part 01) - Lists _\*CodeAlong_
 
 _Starting point: movie-app-part-01_
 _Ending point: movie-app-part-02_
@@ -272,6 +272,11 @@ Custom Hooks are more of a convention than a feature. If a function’s name sta
 
 ```
 - custom hook useFetch
+- create a hook that with a single url be able to:
+    - Fetch the data
+    - Retrieve it
+    - Control the loading indicator for the fetching process
+    - Handling Errors
 
 ```
 
@@ -394,9 +399,8 @@ Key Usecases:
 
 ## Tools
 
--[React dev tool](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-
-- Components
-- profiler
+- [React dev tool](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+  - Components
+  - Profiler
 - [ReduRedux DevToolsx](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
   - Time travel debugging
