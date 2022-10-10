@@ -84,8 +84,6 @@ _Goal of this section, get familiar with dev environment, hands on first app dev
 
 ### Intruducing [lab-00](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
 
-### React basic concepts & conventions
-
 ## Class Component & Function Component
 
 ### LAB (15 min)
