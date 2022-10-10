@@ -187,9 +187,6 @@ _TO TALKABOUT:_
 - React developer tools add plugin and showcase
 - talk about component tree
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-04-solution)
-
 ### LAB (movies app part 03) - Challange - remove item _\*HandsOn_ (15 min)
 
 _Starting point: movie-app-part-02_
@@ -201,9 +198,6 @@ _Ending point: movie-app-part-03_
 - add a button on each FilmItem that remove the item from the list being displayed
 
 ```
-
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)|
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution)
 
 ## Effect hook: useEffect [link](https://reactjs.org/docs/hooks-effect.html)
 
