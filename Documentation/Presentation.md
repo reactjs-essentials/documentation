@@ -446,13 +446,13 @@ Requirements:
 
 ## [Context API](https://reactjs.org/docs/context.html)
 
-# What is React context?
+### What is React context?
 - React context allows us to pass down and use (consume) data in whatever component we need in our React app without using props.
     
-# When should you use React context?
+### When should you use React context?
 - React context is great when you are passing data that can be used in any component in your application.
 
-# These types of data include:
+### These types of data include:
 
 - Theme data (like dark or light mode)
 - User data (the currently authenticated user)
@@ -461,7 +461,8 @@ Requirements:
 - Data should be placed on React context that does not need to be updated often.
 Why? Because context was not made as an entire state management system. It was made to make consuming data easier.
     
-# What problems does React context solve?
+### What problems does React context solve?
+    
 *React context helps us avoid the problem of props drilling.*
 - Props drilling is a term to describe when you pass props down multiple levels to a nested component, through components that don't need it.
     
