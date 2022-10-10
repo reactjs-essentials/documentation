@@ -365,7 +365,7 @@ _Ending point: movie-app-part-14_
 //TODO:Miguel
 
 ## Context API
-
+//TODO:Miguel
 ## Security
 
 Key Usecases:
@@ -375,7 +375,7 @@ Key Usecases:
 - Protected Routes based on Authentication/Authorization
 - Common used aproach to tackle Security requirements (api Context, Routing Guards, Authorization token header)
 
-### Lab: Implement security into our up - a round up of all techniques learned so far
+### LAB: Implement security into our App - a round up of all techniques learned so far! _*CodeAlong_
 
 - [Protected routes implementation example](https://www.robinwieruch.de/react-router-private-routes/)
 - [Authentication example](https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications)
