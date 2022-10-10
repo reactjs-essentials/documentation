@@ -63,11 +63,10 @@ sum(...numbers)
 - Template-centric vs. JavaScript-centric
 - Separate vs. Single File
 
-  ## React basics
+## React basics
+_Goal of this section, get familiar with dev environment, hands on first app developments, basic react concepts_
 
-  _Goal of this section, get familiar with dev environment, hands on first app developments, basic react concepts_
-
-  ### First react App
+### First react App
 
 ```
   npm init -y
