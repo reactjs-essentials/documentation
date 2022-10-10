@@ -311,13 +311,16 @@ The useNavigate hook returns a function that lets you navigate programmatically,
 [Middle point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution)
     
-  Requirements Middle Point:
+### Requirements Middle Point:
+```
 - Add BrowserRouter in index.js
 - Define Routes in App.js
-    
-  Requirements Ending Point:
+```
+### Requirements Ending Point:
+```
 - Create details page
 - Navigate to URL with params
+```
 
 ## [Styling components](https://css-tricks.com/different-ways-to-write-css-in-react/)
    
@@ -342,12 +345,13 @@ The useNavigate hook returns a function that lets you navigate programmatically,
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-10-solution)
     
-  Requirements 
+### Requirements
+```    
 - Add Navbar.css -> CSS Stylesheets
 - Use Inline Styles in FilmItem.js
 - Add FilmDetails.module.css -> CSS Modules
 - Use Styled Components in FilmList.js
-
+```
 ## [Forms in react](https://reactjs.org/docs/forms.html)
 
 ### LAB - First Form _\*codeAlong_
@@ -434,15 +438,15 @@ Recommended Tools: Jest & React Testing Library
 _Starting point: movie-app-part-14_
 _Ending point: movie-app-part-15_
     
-Requirements:
-    
+### Requirements:
+```    
 - App.test.js
        1. Check component rendering after navigation to form (using click and timeout). Using getByText method.
 - FilmItem.test.js
        2. Check component rendering using mock for props. Using getByText method.
 - Navbar.test.js : 
        3. Testing using getByRole from React Testing Library
-
+```
 
 ## [Context API](https://reactjs.org/docs/context.html)
 
@@ -474,10 +478,10 @@ Why? Because context was not made as an entire state management system. It was m
 _Starting point: movie-app-part-15_
 _Ending point: movie-app-part-16_
     
-Requirements:
-    
+### Requirements:
+```    
 - Create ThemeContext : dark - light (updated in Navbar.js)
-    
+```    
 ## Security
 
 Key Usecases:
@@ -551,12 +555,14 @@ _Ending point: movie-app-part-17_
 
 Create a new screen where we are going to have a watchlist that shows the selected movies on the home page
 
-Requirements:
+### Requirements:
     
+```    
 - Create new file WatchList.js (displays movies from Redux state)
 - Add button WatchList in FilmList component that uses dispatch function from Redux.
 - Create watchlistReducer with 2 actions : DELETE_FILM and ADD_FILM
-
+```
+    
 ## Tools
 
 - [React dev tool](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
