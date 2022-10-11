@@ -74,7 +74,7 @@ _Goal of this section, get familiar with dev environment, hands on first app dev
   // add hello world component
 ```
 
-intruducing [lab-00](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
+DEMO: [lab-00](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-00)
 
 ### App from create react app
 
@@ -87,7 +87,7 @@ intruducing [lab-00](https://stackblitz.com/github/reactjs-essentials/training-c
 
 ### Class Component & Function Component
 
-### LAB (15 min)
+### DEMO (15 min)
 
 #### Requirements:
 
@@ -97,7 +97,7 @@ intruducing [lab-00](https://stackblitz.com/github/reactjs-essentials/training-c
 - HelloFunctinalComponent output should be "hello, I am a {typeComponent}" where typeComponent==="Functional component"
 - Render both components in App Component
 ```
-
+DEMO
 [Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-start) |
 [Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-01-solution)
 
@@ -146,10 +146,10 @@ import "./style.css";
 
 ## Lists, Destructuring props, Composing & Extracting Components
 
-### LAB (Movies app part 01) - Lists _\*CodeAlong_
+### LAB 1 (Movies app part 01) - Lists _\*CodeAlong_
 
-_Starting point: movie-app-part-01_
-_Ending point: movie-app-part-02_
+_Starting point: movie-app-part-00_
+_Ending point: movie-app-part-01_
 
 #### Requirements:
 
@@ -168,7 +168,7 @@ _TO TALK ABOUT:_
 
 - key tag is for react to keep track on the DOM as its output, must be unique in items list
 
-### LAB (Movies app part 02) - components integration _\*HandsOn_ (15 min)
+### LAB 2  (Movies app part 02) - components integration _\*HandsOn_ (15 min)
 
 _Starting point: movie-app-part-01_
 _Ending point: movie-app-part-02_
@@ -187,7 +187,7 @@ _TO TALKABOUT:_
 - React developer tools add plugin and showcase
 - talk about component tree
 
-### LAB (movies app part 03) - Challange - remove item _\*HandsOn_ (15 min)
+### LAB 3 (movies app part 03) - Challange - remove item _\*HandsOn_ (15 min)
 
 _Starting point: movie-app-part-02_
 _Ending point: movie-app-part-03_
@@ -201,7 +201,10 @@ _Ending point: movie-app-part-03_
 
 ## Effect hook: useEffect [link](https://reactjs.org/docs/hooks-effect.html)
 
-### LAB - Demo - useState & useEffect _\*CodeAlong_
+### DEMO - useState & useEffect _\*CodeAlong_
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-07-start)
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-07-solution)
 
 _TO TALKABOUT:_
 
@@ -222,10 +225,12 @@ _TO TALKABOUT:_
 - DELETE - https://apimocha.com/moviesapi/film/:imdbID
 - POST - https://apimocha.com/authentication/login
 
-LAB - (movies app part 04) API communication _\*codeAlong_
+## LAB 4 - (movies app part 04) API communication _\*codeAlong_
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution)
+
+_Starting point: movie-app-part-03_
+_Ending point: movie-app-part-04_
+
 _TO TALK ABOUT:_
 
 - talk about api mocha - https://apimocha.com/lab-films/films
@@ -233,7 +238,11 @@ _TO TALK ABOUT:_
 - Fetch data
 - Conditional render filmList if films are still not fetched
 
-#### LAB - (movies app part 05) API challange _\*HandsOn_ (20 min)
+#### LAB 5 - (movies app part 05) API challange _\*HandsOn_ (20 min)
+
+
+_Starting point: movie-app-part-04_
+_Ending point: movie-app-part-05_
 
 #### Requirements:
 
@@ -243,10 +252,10 @@ _TO TALK ABOUT:_
 
 ```
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution)
+#### LAB 6 - (movies app part 06) API handling errors _\*codeAlong_
 
-#### LAB - (movies app part 06) API handling errors _\*codeAlong_
+_Starting point: movie-app-part-05_
+_Ending point: movie-app-part-06_
 
 #### Requirements:
 
@@ -260,7 +269,13 @@ _TO TALK ABOUT:_
 
 Custom Hooks are more of a convention than a feature. If a function’s name starts with ”use” and it calls other Hooks, we say it is a custom Hook.
 
-### LAB - Demo - custom Hooks _\*CodeAlong_
+## [Demo](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-10-solution)
+
+
+### LAB 7 - (movies app part 07) custom Hooks _\*CodeAlong_
+
+_Starting point: movie-app-part-06_
+_Ending point: movie-app-part-07_
 
 #### Requirements:
 
@@ -273,8 +288,6 @@ Custom Hooks are more of a convention than a feature. If a function’s name sta
     - Handling Errors
 
 ```
-
-...
 
 ## Routing, useParams, useNavigate & Link
 
@@ -298,12 +311,18 @@ The useParams hook returns an object of key/value pairs of the dynamic params fr
 - useNavigate()
     
 The useNavigate hook returns a function that lets you navigate programmatically, for example in an effect.
-    
-### LAB (Movies app part 07 to Movies app part 09) - Routing + useParams _\*CodeAlong_
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-07-solution) |
-[Middle point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-08-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution)
+
+### DEMO - Routing, useParams, Link _\*CodeAlong_
+
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-05-solution)
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-06-start)
+    
+## LAB 8 & 9 (Movies app part 08 + Movies app part 09) - Routing + useParams _\*CodeAlong_
+
+_Starting point: movie-app-part-07_
+_Middle point: movie-app-part-08_
+_Ending point: movie-app-part-09_
     
 ### Requirements Middle Point:
 ```
@@ -333,11 +352,16 @@ The useNavigate hook returns a function that lets you navigate programmatically,
    - Can also add scoped styles quite easily, you just need to create a file with the extension .module.css
    - During the build step a new class was generated dynamically with a unique identifier.
    - CSS Modules tries to solve a problem that you might encounter when working on medium to large projects and that is global scoping in CSS.
+ 
+ ## DEMO STYLING
     
- ### LAB (Movies app part 10) - Styling  _\*CodeAlong_
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-styling-start) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-styling-solution) 
+ 
+ ### LAB 10 (Movies app part 10) - Styling  _\*CodeAlong_
 
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-09-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-10-solution)
+_Starting point: movie-app-part-09_
+_Ending point: movie-app-part-10_
     
 ### Requirements
 ```    
@@ -348,7 +372,7 @@ The useNavigate hook returns a function that lets you navigate programmatically,
 ```
 ## [Forms in react](https://reactjs.org/docs/forms.html)
 
-### LAB - First Form _\*codeAlong_
+### LAB 11  - First Form _\*codeAlong_
 
 _Starting point: movie-app-part-09_
 _Ending point: movie-app-part-11_
@@ -376,7 +400,7 @@ Keynotes:
   }
 ```
 
-### LAB Forms custom inputs
+### LAB 12 - Forms custom inputs
 
 _Starting point: movie-app-part-11_
 _Ending point: movie-app-part-12_
@@ -392,7 +416,7 @@ _Ending point: movie-app-part-12_
   - npm i react-select for actors
 ```
 
-### LAB: Using with Formik library Refactor to use Formik [link](https://formik.org/docs/overview)
+### LAB 13 - Using with Formik library Refactor to use Formik [link](https://formik.org/docs/overview)
 
 _Starting point: movie-app-part-12_
 _Ending point: movie-app-part-13_
@@ -405,7 +429,7 @@ Keynotes / Formik Basics:
 - formik props : formic props and functions for handlig scenarios for each formfils
   - https://formik.org/docs/api/formik
 
-### LAB: Using with Formik Field for and data validation
+### LAB 14 - Using with Formik Field for and data validation
 
 _Starting point: movie-app-part-13_
 _Ending point: movie-app-part-14_
@@ -424,10 +448,12 @@ Recommended Tools: Jest & React Testing Library
 
 - **React Testing Library** is a set of helpers that let you test React components without relying on their implementation details. This approach makes refactoring a breeze and also nudges you towards best practices for accessibility. Although it doesn’t provide a way to “shallowly” render a component without its children, a test runner like Jest lets you do this by mocking.
     
-### LAB: Testing (Movies app part 15) 
+ ## DEMO TESTING
     
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-14-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-15-solution)
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-testing-start) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-testing-solution) 
+    
+### LAB 15 Testing (Movies app part 15)
     
 _Starting point: movie-app-part-14_
 _Ending point: movie-app-part-15_
@@ -463,12 +489,14 @@ Why? Because context was not made as an entire state management system. It was m
     
 *React context helps us avoid the problem of props drilling.*
 - Props drilling is a term to describe when you pass props down multiple levels to a nested component, through components that don't need it.
+
+ ## DEMO CONTEXT API
     
-### LAB: Context API (Movies app part 16) 
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-context-start) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-context-solution) 
     
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-15-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-16-solution)
-    
+### LAB 16 - Context API (Movies app part 16) 
+
 _Starting point: movie-app-part-15_
 _Ending point: movie-app-part-16_
     
@@ -485,11 +513,11 @@ Key Usecases:
 - Protected Routes based on Authentication/Authorization
 - Common used aproach to tackle Security requirements (api Context, Routing Guards, Authorization token header)
 
-### LAB: Implement security into our App - a round up of all techniques learned so far! _*CodeAlong_
+### LAB 17 - Implement security into our App - a round up of all techniques learned so far! _*CodeAlong_
 
 - [Protected routes implementation example](https://www.robinwieruch.de/react-router-private-routes/)
 - [Authentication example](https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications)
-  _Starting point: movie-app-part-17_
+  _Starting point: movie-app-part-16_
   _Ending point: movie-app-part-18_
 
 #### Requirements
@@ -539,11 +567,13 @@ A reducer is just a function that takes two arguments and returns your app's cur
     
 Redux actions are JavaScript objects that contain two properties: type and payload. These actions are "dispatched," or used as arguments by the Redux store's dispatch API method.
     
-### LAB: Redux (Movies app part 17) 
+ ## DEMO CONTEXT API
     
-[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-16-solution) |
-[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-17-solution)
+[Starting point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-redux-start) |
+[Ending point](https://stackblitz.com/github/reactjs-essentials/training-content/tree/main/lab-redux-solution) 
     
+### LAB 18 - Redux (Movies app part 17) 
+     
 _Starting point: movie-app-part-16_
 _Ending point: movie-app-part-17_
 
