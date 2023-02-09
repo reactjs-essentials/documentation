@@ -1,17 +1,20 @@
-import {useState, useEffect } from 'react';
+import { useState } from "react";
 
-    export const Counter=()=> {
-      const [count, setCount] = useState(0);
-      const incrementCount = () => setCount(count + 1);
-      useEffect(() => {
-        document.title = `You clicked ${count} times`
-      });
+const Counter = () => {
 
-      return (
-        <div>
-          <p>You clicked {count} times</p>
-          <button onClick={incrementCount}>ClickMe</button>
-        </div>
-      )
-    }
+    const [counter, setCounter] = useState (0)
+
+return (
+
+    <div>
+        <h4>Counter</h4>
+        <section>
+            <h4>Counter : {counter}</h4>
+            <button onClick={() => setCounter(counter + 1)}> + </button>
+            <button onClick={() => setCounter(counter - 1)}> - </button>
+        </section>
+    </div>
+    )
+}
+
 export default Counter;
