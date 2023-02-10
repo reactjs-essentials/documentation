@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 
- const List = ({pepe}) => {
+ const List = (items) => {
 
   //const data = props.items;
   //const { items } = props
@@ -10,7 +10,7 @@ import "./style.css";
   return (
     <div>
       <ul>
-        {pepe.map((item, idx) => (
+        {items.map((item, idx) => (
           <li key={idx}>
             {item}
           </li>
